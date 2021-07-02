@@ -1,0 +1,776 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="如果声音不记得｜我有万语千言｜藏在颤抖的字里行间" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="如果声音不记得｜我有万语千言｜藏在颤抖的字里行间" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="如果声音不记得｜我有万语千言｜藏在颤抖的字里行间" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="Knowledge" />
+
+
+<link rel="canonical" href="http://example.com/2021/06/22/ES6/">
+
+
+
+  <title>
+ES6 - self-studies |
+QILIANG BLOG = 如果声音不记得｜我有万语千言｜藏在颤抖的字里行间</title>
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">ES6
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2021-06-22 14:53:27">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-06-22T14:53:27+08:00">2021-06-22</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">QILIANG BLOG</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclimtf7dj20zk0m8qav.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclxfdlttj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipey84bjtj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/self-studies/" itemprop="item" rel="index" title="分类于 self-studies"><span itemprop="name">self-studies</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/22/ES6/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Qi-Liang">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="如果声音不记得｜我有万语千言｜藏在颤抖的字里行间">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="es6学习"><a class="markdownIt-Anchor" href="#es6学习">#</a> ES6 学习</h1>
+<blockquote>
+<p>为什么学习 ES6</p>
+<ol>
+<li>更高的开发效率 Object.assign Array.from …</li>
+<li>更少的出错可能 let&amp;const Symbol …</li>
+<li>更人性化的语法 箭头函数 async&amp;await …</li>
+</ol>
+</blockquote>
+<h2 id="使用脚手架"><a class="markdownIt-Anchor" href="#使用脚手架">#</a> 使用脚手架</h2>
+<blockquote>
+<ol>
+<li><code>npm install learn-es-cli -g</code>  全局安装脚手架</li>
+<li><code>learn-es-cli init</code>  初始化项目 (es6-project)</li>
+<li><code>cd  es6-project</code>  进入项目列表</li>
+<li><code>npm install</code>  安装所需依赖</li>
+<li><code>npm run dev</code>  运行项目</li>
+<li><code>http://localhost:8080</code>  通过给定端口访问 (端口不尽相同，依据给定访问)</li>
+</ol>
+</blockquote>
+<h2 id="babel简单使用"><a class="markdownIt-Anchor" href="#babel简单使用">#</a> babel 简单使用</h2>
+<blockquote>
+<p>转换 es6 -&gt; es5<br>
+ <code>npm install babel-cli -g</code>  安装 babel<br>
+ <code>npm install -D babel-preset-es2015</code>  安装转 es6 依赖<br>
+创建 src 文件夹，并写段 es6 语法 js 代码<br>
+创建.babelrc 文件，写入规则 <code>&#123;&quot;presets&quot;: [&quot;es2015&quot;]&#125;</code>  配置转换规则<br>
+ <code>bebel src -d dist</code>  转换命令</p>
+</blockquote>
+<h2 id="语法"><a class="markdownIt-Anchor" href="#语法">#</a> 语法</h2>
+<h3 id="let"><a class="markdownIt-Anchor" href="#let">#</a> Let</h3>
+<ol>
+<li>ES6 新增 let 命令，用来声明变量，以 let 声明的全局变量不属于 window 对象，所以不可用 window 对象调用</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a) <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a) <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>用 let 定义变量不可以重复声明，var 可以</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">6</span></span><br><span class="line"><span class="built_in">console</span>.log(a)  <span class="comment">//6</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="number">6</span></span><br><span class="line"><span class="built_in">console</span>.log(a)  <span class="comment">//报错</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>let 声明的变量不存在变量提升</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)  </span><br><span class="line">    <span class="comment">//此处由于下面是以var定义的变量，会有变量提升，但是赋值还是在下面，所以最后结果会输出undefined</span></span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line">foo() <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)  </span><br><span class="line">    <span class="comment">//此处由于下面是以let定义的变量，不存在变量提升，所以结果会出错，表示没有变量</span></span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line">foo() </span><br><span class="line"><span class="comment">// Uncaught ReferenceError: Cannot access &#x27;a&#x27; before initialization</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>let 的暂时性死区</li>
+</ol>
+<blockquote>
+<p>先来看一段代码</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span> </span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">//5</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>,log(b) <span class="comment">//undefined</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="number">5</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> c = <span class="number">5</span></span><br><span class="line"><span class="built_in">console</span>.log(c) <span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(d)</span><br><span class="line"><span class="keyword">let</span> d = <span class="number">5</span> <span class="comment">// 报错，显示不存在d</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以上是 let 不存在变量提升所造成的，而因为此也会造成暂时性死区问题，再来看段代码</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">5</span>  <span class="comment">//自然此处是会报错，因为没有变量提升</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line"><span class="keyword">if</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a) <span class="comment">//5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line"><span class="keyword">if</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">6</span></span><br><span class="line">    <span class="built_in">console</span>.log(a) <span class="comment">//6</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line"><span class="keyword">if</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a) <span class="comment">//报错</span></span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>造成第四段代码产生错误结果的原因是什么呢？<br>
+如果在块级区域里，使用<strong> let 定义</strong>了某变量，那么在当前区域内使用此变量，只会寻找块级区域的，不会寻找全局中的，而又类似于第四段代码一样，将变量定义于使用之后，那么由于暂时性死区以及 let，const 无变量提升的原因，会造成错误<br>
+总之，代码块内，使用 let 命令声明变量之前，该变量都是不可用的，这就是暂时性死区</p>
+</blockquote>
+<ol start="5">
+<li>总结<br>
+使用 let 声明的变量：</li>
+</ol>
+<ul>
+<li>
+<p>不属于顶层对象 window</p>
+</li>
+<li>
+<p>不允许重复声明</p>
+</li>
+<li>
+<p>不存在变量提升</p>
+</li>
+<li>
+<p>暂时性死区</p>
+</li>
+<li>
+<p>块级作用域</p>
+</li>
+</ul>
+<h3 id="const"><a class="markdownIt-Anchor" href="#const">#</a> Const</h3>
+<blockquote>
+<p>同 let 一样</p>
+<ul>
+<li>不属于顶层对象 window</li>
+<li>不允许重复声明</li>
+<li>不存在变量提升</li>
+<li>块级作用域</li>
+</ul>
+</blockquote>
+<p>需要注意的是:<br>
+const 声明的变量必须进行初始化，不然会抛出异常 Uncaught SyntaxError: Missing initializer in const declaration。</p>
+<p>const 实际上保证的并不是变量的值不能改动，而是变量指向的那个内存地址所保存的数据不能改动。</p>
+<h3 id="解构赋值"><a class="markdownIt-Anchor" href="#解构赋值">#</a> 解构赋值</h3>
+<p>ES6 中新增了变量赋值方式，即解构赋值，主要对数组和对象，取值然后对变量进行赋值<br>
+重点需要保证：<strong>赋值两边的结构要相同</strong></p>
+<blockquote>
+<p>正常从数组取值并赋值给变量</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="keyword">let</span> a = arr[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">let</span> b = arr[<span class="number">1</span>]</span><br><span class="line"><span class="keyword">let</span> c = arr[<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用解构赋值</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,b,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>解构赋值的重点在于赋值，赋值元素本身不受改变，只是 copy 出来赋值给变量</p>
+</blockquote>
+<h4 id="数组解构赋值"><a class="markdownIt-Anchor" href="#数组解构赋值">#</a> 数组解构赋值</h4>
+<ol>
+<li>赋值元素可以是任何可遍历的对象</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,b,c] = <span class="string">&quot;abc&quot;</span>  <span class="comment">//[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</span></span><br><span class="line"><span class="keyword">let</span> [one,two,three] = <span class="keyword">new</span> <span class="built_in">Set</span>[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>被赋值的遍历可以是对象的属性，不仅限在单纯的变量</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = &#123;&#125;</span><br><span class="line">[user.firstName,user.secondName] = <span class="string">&#x27;qi liang&#x27;</span>.split(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(user.firstName)  <span class="comment">//qi</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>循环体</li>
+</ol>
+<blockquote>
+<p>解构赋值在循环中使用，配合 entries 使用</p>
+</blockquote>
+<p>Object.entries () 是返回自身可枚举的键值对数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    name:<span class="string">&quot;qiliang&quot;</span>,</span><br><span class="line">    age:<span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.entries(obj)) <span class="comment">//[ [&#x27;name&#x27;,&#x27;qiliang&#x27;],[&#x27;age&#x27;,18] ]</span></span><br></pre></td></tr></table></figure>
+<p>此时配合 entries 使用，即</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = &#123;</span><br><span class="line">  name: <span class="string">&#x27;qiliang&#x27;</span>,</span><br><span class="line">  age: <span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// loop over keys-and-values</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> [key, value] <span class="keyword">of</span> <span class="built_in">Object</span>.entries(user)) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;key&#125;</span>:<span class="subst">$&#123;value&#125;</span>`</span>) <span class="comment">// name:qiliang age:18</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>可以跳过赋值元素</li>
+</ol>
+<blockquote>
+<p>可以用逗号忽略数组某个元素对变量进行赋值</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [name,,title] = [<span class="string">&#x27;john&#x27;</span>,<span class="string">&#x27;jim&#x27;</span>,<span class="string">&#x27;sum&#x27;</span>,<span class="string">&#x27;Moon&#x27;</span>]</span><br><span class="line"><span class="built_in">console</span>.log(title)  <span class="comment">//sun</span></span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>rest 参数</li>
+</ol>
+<blockquote>
+<p>rest 可以来接受赋值数组的剩余参数，需要将 rest 放在被赋值变量的最后一个位置上</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [name1, name2, ...rest] = [<span class="string">&quot;Julius&quot;</span>, <span class="string">&quot;Caesar&quot;</span>, <span class="string">&quot;Consul&quot;</span>, <span class="string">&quot;of the Roman Republic&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(name1) <span class="comment">// Julius</span></span><br><span class="line"><span class="built_in">console</span>.log(name2) <span class="comment">// Caesar</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Note that type of `rest` is Array.</span></span><br><span class="line"><span class="built_in">console</span>.log(rest[<span class="number">0</span>]) <span class="comment">// Consul</span></span><br><span class="line"><span class="built_in">console</span>.log(rest[<span class="number">1</span>]) <span class="comment">// of the Roman Republic</span></span><br><span class="line"><span class="built_in">console</span>.log(rest.length) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>默认值</li>
+</ol>
+<blockquote>
+<p>如果数组内容少于被赋值变量的个数，不会报错，未被赋值的变量是 undefined，当然也可以赋予默认值</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [firstName, surname] = []</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(firstName) <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(surname) <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// default values</span></span><br><span class="line"><span class="keyword">let</span> [name = <span class="string">&quot;Guest&quot;</span>, surname = <span class="string">&quot;Anonymous&quot;</span>] = [<span class="string">&quot;Julius&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(name)    <span class="comment">// Julius (from array)</span></span><br><span class="line"><span class="built_in">console</span>.log(surname) <span class="comment">// Anonymous (default used)</span></span><br></pre></td></tr></table></figure>
+<h4 id="对象解构赋值"><a class="markdownIt-Anchor" href="#对象解构赋值">#</a> 对象解构赋值</h4>
+<ol>
+<li>基本用法</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> options = &#123;</span><br><span class="line">    width : <span class="string">&quot;100&quot;</span>,</span><br><span class="line">    height : <span class="string">&quot;200&quot;</span>,</span><br><span class="line">    title : <span class="string">&quot;Menu&quot;</span>,</span><br><span class="line">    display : <span class="string">&quot;flex&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> &#123;width,height,title,display&#125; = options</span><br><span class="line"><span class="built_in">console</span>.log(width); <span class="comment">//100</span></span><br><span class="line"><span class="built_in">console</span>.log(height); <span class="comment">//200</span></span><br><span class="line"><span class="built_in">console</span>.log(title); <span class="comment">//Menu</span></span><br><span class="line"><span class="built_in">console</span>.log(display); <span class="comment">//flex</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在对象解构赋值过程中，左侧模板要与右侧的 Object 一致，但是属性顺序无需一致</p>
+</blockquote>
+<ol start="2">
+<li>默认值</li>
+</ol>
+<blockquote>
+<p>对象结构赋值也是可以定义默认值的</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> options = &#123;</span><br><span class="line">  title: <span class="string">&quot;Menu&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123;width = <span class="number">100</span>, height = <span class="number">200</span>, title&#125; = options</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(title)  <span class="comment">// Menu</span></span><br><span class="line"><span class="built_in">console</span>.log(width)  <span class="comment">// 100</span></span><br><span class="line"><span class="built_in">console</span>.log(height) <span class="comment">// 200</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>rest</li>
+</ol>
+<blockquote>
+<p>数组中 rest 是将剩下的统一放到 rest 下，对象中是将剩下的存到 rest 下</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> options = &#123;</span><br><span class="line">    width = <span class="string">&quot;Menu&quot;</span></span><br><span class="line">    heigth = <span class="number">100</span></span><br><span class="line">    width = <span class="number">200</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> &#123;title, ...rest&#125; = options</span><br><span class="line"></span><br><span class="line"><span class="comment">// rest = &#123;height : 100,width : 200&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(rest.height) <span class="comment">//100</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>嵌套对象</li>
+</ol>
+<blockquote>
+<p>如果一个 Array 或者 Object 复杂，无论嵌套了 Array 或者 Object，无论嵌套了多少，只需要保证左右结构一致就好</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 以下结构中嵌套有一个对象一个数组</span></span><br><span class="line"><span class="keyword">let</span> options = &#123;</span><br><span class="line">    size:&#123;</span><br><span class="line">        width:<span class="number">200</span>,</span><br><span class="line">        height:<span class="number">100</span></span><br><span class="line">    &#125;,</span><br><span class="line">    items:[<span class="string">&quot;div1&quot;</span>,<span class="string">&quot;div2&quot;</span>].</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 相应的被赋值</span></span><br><span class="line"><span class="keyword">let</span> &#123;</span><br><span class="line">    size:&#123;</span><br><span class="line">        width,</span><br><span class="line">        height</span><br><span class="line">    &#125;,</span><br><span class="line">    items:[item1,item2]</span><br><span class="line">&#125; = options</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(width) <span class="comment">// 200</span></span><br><span class="line"><span class="built_in">console</span>.log(item2) <span class="comment">// &quot;div2&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 别名</span></span><br><span class="line"><span class="keyword">let</span> person = &#123;</span><br><span class="line">    name:<span class="string">&quot;qiliang&quot;</span>,</span><br><span class="line">    age:<span class="number">18</span>,</span><br><span class="line">    ac:&#123;</span><br><span class="line">        name:<span class="string">&quot;qi&quot;</span>,</span><br><span class="line">        age:<span class="number">18</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123;</span><br><span class="line">    name,</span><br><span class="line">    age,</span><br><span class="line">    ac</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(ac) <span class="comment">//此处ac是 &#123;name:&quot;qi&quot;,age:18&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123;</span><br><span class="line">    name,</span><br><span class="line">    age,</span><br><span class="line">    ac:&#123;</span><br><span class="line">        name,</span><br><span class="line">        age</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name) <span class="comment">//Uncaught SyntaxError: Identifier &#x27;name&#x27; has already been declared</span></span><br><span class="line"><span class="built_in">console</span>.log(age) <span class="comment">//Uncaught SyntaxError: Identifier &#x27;age&#x27; has already been declared</span></span><br><span class="line"><span class="comment">// 这是因为name和age变量重复被定义相当于,此时就可以给被赋值变量起别名</span></span><br><span class="line"><span class="keyword">let</span> &#123;</span><br><span class="line">    name:tName,</span><br><span class="line">    age:tAge,</span><br><span class="line">    ac:&#123;</span><br><span class="line">        name,</span><br><span class="line">        age</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(tName) <span class="comment">//qiliang</span></span><br><span class="line"><span class="built_in">console</span>.log(name) <span class="comment">//qi</span></span><br><span class="line"><span class="comment">// 此时都可以正确赋值并使用</span></span><br></pre></td></tr></table></figure>
+<h4 id="字符串解构赋值"><a class="markdownIt-Anchor" href="#字符串解构赋值">#</a> 字符串解构赋值</h4>
+<blockquote>
+<p>可以当作是数组的解构</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;qiliang&#x27;</span></span><br><span class="line"><span class="keyword">let</span> [a,b,c,d,e]  = str</span><br><span class="line"><span class="built_in">console</span>.log(a,b,c,d,e) <span class="comment">//q i l i a</span></span><br></pre></td></tr></table></figure>
+<h4 id="解构赋值tips"><a class="markdownIt-Anchor" href="#解构赋值tips">#</a> 解构赋值 tips</h4>
+<h5 id="解构用于函数参数上"><a class="markdownIt-Anchor" href="#解构用于函数参数上">#</a> 解构用于函数参数上</h5>
+<blockquote>
+<p>这是一个正常求和函数的写法</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sum = <span class="function"><span class="params">arr</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">        result += arr[i]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(result) <span class="comment">//6</span></span><br><span class="line">&#125;</span><br><span class="line">sum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>接下来使用到解构赋值<br>
+函数本身参数处相当于赋值等号左边，执行函数处传参相当于赋值等号右边</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 可以在参数处使用解构赋值，由于传递时一个数组，那么对应参数此处也是一个数组结构</span></span><br><span class="line"><span class="keyword">const</span> sum = [a,b,c] =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a+b+c) <span class="comment">//6</span></span><br><span class="line">&#125;</span><br><span class="line">sum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>再来看一个例子</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 解构赋值左边是一个函数，接收的时一个对象参数</span></span><br><span class="line"><span class="keyword">const</span> foo = <span class="function">(<span class="params">&#123;name,age&#125;</span>) =&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name,age) <span class="comment">//qiliang 18</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 还可以传递默认参数,这种并没有传递school，但是由于默认值也可以输出，如果传递那么就以传递过来的值为最终值</span></span><br><span class="line"><span class="keyword">const</span> foo = <span class="function">(<span class="params">&#123;name,age,school=<span class="string">&#x27;bmd&#x27;</span>&#125;</span>) =&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name,age,school) <span class="comment">//qiliang 18 bmd</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 解构赋值右边，右边传递一个对象参数</span></span><br><span class="line">foo(&#123;</span><br><span class="line">    name:<span class="string">&quot;qiliang&quot;</span>,</span><br><span class="line">    age:<span class="number">18</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>作为函数的返回值而言</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        name:<span class="string">&#x27;qiliang&#x27;</span>,</span><br><span class="line">        age:<span class="number">18</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> &#123;name,age&#125; = foo() <span class="comment">//这种写法就是作为函数的返回值而言，也可以使用解构赋值，保持赋值两边结构相同</span></span><br><span class="line"><span class="built_in">console</span>.log(name,age) <span class="comment">//qiliang 18</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>需要交换两个变量的值</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span> ;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">2</span> ;</span><br><span class="line"><span class="keyword">let</span> c = <span class="number">3</span> ;</span><br><span class="line"></span><br><span class="line">[a,c] = [c,a]</span><br><span class="line"><span class="built_in">console</span>.log(a,b,c); <span class="comment">// 3 2 1</span></span><br></pre></td></tr></table></figure>
+<h5 id="json与解构赋值"><a class="markdownIt-Anchor" href="#json与解构赋值">#</a> json 与解构赋值</h5>
+<blockquote>
+<p>由于现在项目基本都是前后端分离，前端一个项目，后端一个项目，中间以 Ajax 请求去连接，通常传递的都是 json 值</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> jsonText = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;qilian&quot;,&quot;age&quot;:&quot;18&quot;&#125;&#x27;</span></span><br><span class="line"><span class="keyword">const</span> obj = <span class="built_in">JSON</span>.parse(jsonText);</span><br><span class="line"><span class="built_in">console</span>.log(obj) <span class="comment">//&#123;name: &quot;qilian&quot;, age: &quot;18&quot;&#125;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>此处使用一下解构赋值</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> jsonText = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;qilian&quot;,&quot;age&quot;:&quot;18&quot;&#125;&#x27;</span></span><br><span class="line"><span class="keyword">const</span> &#123;name,age&#125; = <span class="built_in">JSON</span>.parse(jsonText);</span><br><span class="line"><span class="built_in">console</span>.log(name,age) <span class="comment">//qilian 18&#125;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以上是一个很简单的 json 使用<br>
+接下来看一下模拟一下 ajax 请求场景</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; json数据(data.json)</span><br><span class="line">&#123;</span><br><span class="line">    &quot;name&quot;:&quot;qiliang&quot;,</span><br><span class="line">    &quot;age&quot;:&quot;18&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 此处使用axios发送ajax请求</span></span><br><span class="line">axios.get(<span class="string">&#x27;./data.json&#x27;</span>).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res) <span class="comment">//此时取到的是请求响应的一系列内容，包括data等</span></span><br><span class="line">    <span class="built_in">console</span>.log(res.data) <span class="comment">//此时可以拿到data</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 由于返回过来的res是一堆数据的综合，我们可以在参数处进行解构赋值，例如：</span></span><br><span class="line">axios.get(<span class="string">&#x27;./data.json&#x27;</span>).then(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data) <span class="comment">//此时取到的是请求响应的内容里的data</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 再其次，data里是上述json文件中的内容，我们就可以再解构赋值，拿到具体内容</span></span><br><span class="line">axios.get(<span class="string">&#x27;./data.json&#x27;</span>).then(<span class="function">(<span class="params">data:&#123;name,age&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name,age)  <span class="comment">//qiliang 18 此时就可以取到返回内容中的data中的name和age属性</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>所以在实际项目中，解构赋值的使用，能让我们更便利，更清晰</p>
+<h3 id="string"><a class="markdownIt-Anchor" href="#string">#</a> String</h3>
+<h4 id="模板字符串"><a class="markdownIt-Anchor" href="#模板字符串">#</a> 模板字符串</h4>
+<blockquote>
+<p>字符串拼接</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;name,age,city&#125; &#123;<span class="attr">name</span>:<span class="string">&quot;qiliang&quot;</span>,<span class="attr">age</span>: <span class="string">&quot;18&quot;</span>,<span class="attr">city</span>:<span class="string">&quot;yc&quot;</span>&#125;</span><br><span class="line"><span class="keyword">let</span> sInfo = <span class="string">&quot;我叫&quot;</span>+name+<span class="string">&quot;来自&quot;</span>+city+<span class="string">&quot;今年&quot;</span>+age+<span class="string">&quot;岁&quot;</span></span><br><span class="line"><span class="keyword">let</span> Info = <span class="string">`我叫<span class="subst">$&#123;name&#125;</span>来自<span class="subst">$&#123;age&#125;</span>今年<span class="subst">$&#123;age&#125;</span>`</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>${} 中可以是运算表达式，对象的属性，函数的调用</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span> </span><br><span class="line"><span class="keyword">let</span> b = <span class="number">6</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name:<span class="string">&#x27;qiliang&#x27;</span>,</span><br><span class="line">    age:<span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">100</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = <span class="string">`<span class="subst">$&#123;a+b&#125;</span>`</span></span><br><span class="line"><span class="built_in">console</span>.log(result); <span class="comment">//11</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;obj.name&#125;</span>`</span>) <span class="comment">//qiliang</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;fun()&#125;</span>`</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="array"><a class="markdownIt-Anchor" href="#array">#</a> Array</h3>
+<blockquote>
+<p>在 ES6 中新增了很多实用的原生 API，使得开发者对 Array 的操控性更强</p>
+</blockquote>
+<h4 id="数组的遍历方式"><a class="markdownIt-Anchor" href="#数组的遍历方式">#</a> 数组的遍历方式</h4>
+<blockquote>
+<p>ES5 中数组遍历方式</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>for 循环</strong></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(arr[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>后来语法升级，有了更多的方法</p>
+<ul>
+<li><strong>forEach()</strong></li>
+</ul>
+<blockquote>
+<p>forEach () 没有返回值，只是针对每个元素调用 function</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr.forEach(<span class="function"><span class="params">element</span> =&gt;</span> &#123;</span><br><span class="line">       <span class="built_in">console</span>.log(element); <span class="comment">//1,2,3,4,5</span></span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>arr.map()</strong></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 可以返回一个新数组</span></span><br><span class="line"><span class="keyword">let</span> arr2 = arr.map(<span class="function">(<span class="params">value,index</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(value,index);</span><br><span class="line">        <span class="keyword">return</span> value + <span class="number">1</span></span><br><span class="line">    &#125;)</span><br><span class="line"><span class="built_in">console</span>.log(arr2); <span class="comment">//value 是 2,3,4,5,6的数组</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>arr.filter()</strong></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr3 = arr.filter(<span class="function">(<span class="params">value</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(value);</span><br><span class="line">        <span class="keyword">return</span> value == <span class="number">1</span></span><br><span class="line">    &#125;)</span><br><span class="line"><span class="built_in">console</span>.log(arr3); <span class="comment">// 1 数组</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>for … of</strong> 遍历方式</li>
+</ul>
+<blockquote>
+<p>一种新增的遍历数据结构的方法，可以遍历数组对象，字符串等数据结构</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> value <span class="keyword">of</span> arr)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value)  <span class="comment">//1 2 3 4 5 不同于for in取到的是字符串</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> index <span class="keyword">of</span> arr.keys())&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(index,arr[index]) <span class="comment">// 0 1 2 3 4 索引值 以及</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> [index,value] <span class="keyword">of</span> arr.entires())&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(index,value) <span class="comment">// 索引与值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/Knowledge/" rel="tag"><i class="ic i-tag"></i> Knowledge</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-06-24 15:29:12" itemprop="dateModified" datetime="2021-06-24T15:29:12+08:00">2021-06-24</time>
+  </span>
+  <span id="2021/06/22/ES6/" class="item leancloud_visitors" data-flag-title="ES6" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Qi-Liang 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Qi-Liang <i class="ic i-at"><em>@</em></i>如果声音不记得｜我有万语千言｜藏在颤抖的字里行间
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2021/06/22/ES6/" title="ES6">http://example.com/2021/06/22/ES6/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/06/22/Vue3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipexe4oykj20zk0m87ji.jpg" title="Vue3">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Vue3</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2021/06/24/Promise%E7%9B%B8%E5%85%B3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxp31goj20zk0m8qv5.jpg" title="Promise相关">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> self-studies</span>
+  <h3>Promise相关</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#es6%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text"> ES6 学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%84%9A%E6%89%8B%E6%9E%B6"><span class="toc-number">1.1.</span> <span class="toc-text"> 使用脚手架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#babel%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="toc-number">1.2.</span> <span class="toc-text"> babel 简单使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-number">1.3.</span> <span class="toc-text"> 语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#let"><span class="toc-number">1.3.1.</span> <span class="toc-text"> Let</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#const"><span class="toc-number">1.3.2.</span> <span class="toc-text"> Const</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="toc-number">1.3.3.</span> <span class="toc-text"> 解构赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="toc-number">1.3.3.1.</span> <span class="toc-text"> 数组解构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="toc-number">1.3.3.2.</span> <span class="toc-text"> 对象解构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="toc-number">1.3.3.3.</span> <span class="toc-text"> 字符串解构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BCtips"><span class="toc-number">1.3.3.4.</span> <span class="toc-text"> 解构赋值 tips</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A7%A3%E6%9E%84%E7%94%A8%E4%BA%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E4%B8%8A"><span class="toc-number">1.3.3.4.1.</span> <span class="toc-text"> 解构用于函数参数上</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#json%E4%B8%8E%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="toc-number">1.3.3.4.2.</span> <span class="toc-text"> json 与解构赋值</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#string"><span class="toc-number">1.3.4.</span> <span class="toc-text"> String</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.3.4.1.</span> <span class="toc-text"> 模板字符串</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#array"><span class="toc-number">1.3.5.</span> <span class="toc-text"> Array</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="toc-number">1.3.5.1.</span> <span class="toc-text"> 数组的遍历方式</span></a></li></ol></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2021/01/31/hexo-be-relevant/" rel="bookmark" title="hexo-be-relevant">hexo-be-relevant</a></li><li><a href="/2021/01/31/Markdown-be-relevant/" rel="bookmark" title="Markdown-be-relevant">Markdown-be-relevant</a></li><li><a href="/2021/03/08/html-css-be-relevant/" rel="bookmark" title="html/css-be-relevant">html/css-be-relevant</a></li><li class="active"><a href="/2021/06/22/ES6/" rel="bookmark" title="ES6">ES6</a></li><li><a href="/2021/06/24/Promise%E7%9B%B8%E5%85%B3/" rel="bookmark" title="Promise相关">Promise相关</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Qi-Liang"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Qi-Liang</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">18</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">4</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">5</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpbGlhbmcxMDE1" title="https:&#x2F;&#x2F;github.com&#x2F;qiliang1015"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTMzNDk1NjA5Nw==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;334956097"><i class="ic i-cloud-music"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2021/06/22/Vue3/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2021/06/24/Promise%E7%9B%B8%E5%85%B3/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/18/webpack/" title="webpack">webpack</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/07/01/%E5%89%8D%E7%AB%AF%E9%A2%98%E6%95%B4%E7%90%86/" title="前端题整理">前端题整理</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Begin/" title="分类于 Begin">Begin</a>
+</div>
+
+    <span><a href="/2021/01/29/hello-world/" title="First article">First article</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/self-studies/" title="分类于 self-studies">self-studies</a>
+</div>
+
+    <span><a href="/2021/01/31/hexo-be-relevant/" title="hexo-be-relevant">hexo-be-relevant</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/07/01/%E5%85%B3%E4%BA%8Ehttp%E7%8A%B6%E6%80%81%E7%A0%81%E9%82%A3%E4%BA%9B%E4%BA%8B/" title="关于http状态码那些事">关于http状态码那些事</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/self-studies/" title="分类于 self-studies">self-studies</a>
+</div>
+
+    <span><a href="/2021/06/24/Promise%E7%9B%B8%E5%85%B3/" title="Promise相关">Promise相关</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/self-studies/" title="分类于 self-studies">self-studies</a>
+</div>
+
+    <span><a href="/2021/06/22/ES6/" title="ES6">ES6</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/06/22/Vue3/" title="Vue3">Vue3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/14/Ajax%E5%AD%A6%E4%B9%A0/" title="Ajax学习">Ajax学习</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/06/21/axios/" title="Axios">Axios</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Qi-Liang @ QILIANG BLOG</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/06/22/ES6/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

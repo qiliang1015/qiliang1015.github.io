@@ -1,0 +1,597 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="如果声音不记得｜我有万语千言｜藏在颤抖的字里行间" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="如果声音不记得｜我有万语千言｜藏在颤抖的字里行间" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="如果声音不记得｜我有万语千言｜藏在颤抖的字里行间" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://example.com/2021/06/21/axios/">
+
+
+
+  <title>
+Axios |
+QILIANG BLOG = 如果声音不记得｜我有万语千言｜藏在颤抖的字里行间</title>
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Axios
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2021-06-21 10:03:50">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-06-21T10:03:50+08:00">2021-06-21</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">QILIANG BLOG</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm0n457cj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclize41wj20zk0m87gk.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/21/axios/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Qi-Liang">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="如果声音不记得｜我有万语千言｜藏在颤抖的字里行间">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="axios"><a class="markdownIt-Anchor" href="#axios">#</a> Axios</h1>
+<blockquote>
+<p>axios 基于 promise 对 Ajax 的封装</p>
+</blockquote>
+<h2 id="入门"><a class="markdownIt-Anchor" href="#入门">#</a> 入门</h2>
+<ol>
+<li>使用方式</li>
+</ol>
+<blockquote>
+<ol>
+<li>npm 安装<br>
+ <code>npm install --save axios</code></li>
+<li>cdn 引入<br>
+ <code>&lt;script src=&quot;https://unpkg.com/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;</code></li>
+</ol>
+</blockquote>
+<ol start="2">
+<li>简单的 axios 请求</li>
+</ol>
+<blockquote>
+<p>默认方式请求 (无参)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    url:&#39;url&#39;</span><br><span class="line">&#125;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>默认方式 GET 请求 (无参)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    url:&#39;url&#39;,</span><br><span class="line">    method:&#39;get&#39;</span><br><span class="line">&#125;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>默认方式 GET 请求 (有参)<br>
+ 将参数附带在 url 地址后，需要添加？，然后将参数以键值对附带</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    url:&#39;url?id&#x3D;1&#39;,</span><br><span class="line">&#x2F;&#x2F; 可以添加params,然后以键值对携带参数，就可不用?参数的形式</span><br><span class="line">&#x2F;&#x2F;    params:&#123;</span><br><span class="line">&#x2F;&#x2F;        id : &quot;1&quot;,</span><br><span class="line">&#x2F;&#x2F;        name: &quot;qiliang&quot;</span><br><span class="line">&#x2F;&#x2F;    &#125;,</span><br><span class="line">    method:&#39;get&#39;</span><br><span class="line">&#125;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>默认方式 POST 请求 (无参)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    url:&#39;&#39;,</span><br><span class="line">    method:&#39;post&#39;</span><br><span class="line">&#125;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>默认方式 POST 请求 (有参)<br>
+ 默认的 axios 有参 POST 请求 data 是发送 application/json 格式<br>
+可以修改成 params 参数发送方式，实际是以连接到 url 后方式发送</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    url:&#39;&#39;,</span><br><span class="line">    method:&#39;post&#39;,</span><br><span class="line">    params:&#123;</span><br><span class="line">        id:&quot;1&quot;,</span><br><span class="line">        name:&quot;qiliang&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>使用 get ()，post () 方式请求</li>
+</ol>
+<blockquote>
+<p>使用 axios.get () 发送无参请求</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">axios.get(url).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;).catch(err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用 axios.get () 发送有参请求</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">axios.get(url,&#123;params:&#123;id:1,name&#x3D;&quot;qiliang&quot;&#125;&#125;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;).catch(err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用 axios.post () 发送无参请求</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">axios.post(url).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;).catch(err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用 axios.post () 发送有参请求</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">axios.post(url,&quot;id&#x3D;1&amp;name&#x3D;qiliang&quot;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;).catch(err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="axios并发请求"><a class="markdownIt-Anchor" href="#axios并发请求">#</a> axios 并发请求</h2>
+<blockquote>
+<p>第一种方式处理<br>
+请求响应回来的是数组，可以通过 res [0],res [1] 的方式分开</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">axios.all([</span><br><span class="line">    axios.get(url1),</span><br><span class="line">    axios.get(url2,&#123;params:&#123;id:1&#125;&#125;)</span><br><span class="line">]).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res[0])</span><br><span class="line">    console.log(res[1])</span><br><span class="line">&#125;).catch(err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>第二种方式处理<br>
+请求响应回来的是数组，可以通过 axios.spread () 处理</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">axios.all([</span><br><span class="line">    axios.get(url1),</span><br><span class="line">    axios.get(url2,&#123;params:&#123;id:1&#125;&#125;)</span><br><span class="line">]).then(</span><br><span class="line">    axios.spread((res1,res2)&#x3D;&gt;&#123;</span><br><span class="line">        console.log(res1)</span><br><span class="line">        console.log(res2)</span><br><span class="line">    &#125;)</span><br><span class="line">).catch(err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="axios全局配置"><a class="markdownIt-Anchor" href="#axios全局配置">#</a> axios 全局配置</h2>
+<blockquote>
+<p>公共部分提取并全局配置</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axios.defaults.baseURL &#x3D; url</span><br><span class="line">axios.defaults.timeout &#x3D; 5000</span><br><span class="line">&#x2F;&#x2F; 将公共部分全局配置后，请求中可直接写url后面路由部分</span><br><span class="line">axios.get(&#39;route&#39;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="axios实例"><a class="markdownIt-Anchor" href="#axios实例">#</a> axios 实例</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 创建axios的实例 </span><br><span class="line">let newVar &#x3D; axios.create(&#123;</span><br><span class="line">    baseURL:url,</span><br><span class="line">    timeout:5000</span><br><span class="line">&#125;)</span><br><span class="line">newVar(&#123;</span><br><span class="line">    url:url</span><br><span class="line">&#125;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;).catch(err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="axios拦截器"><a class="markdownIt-Anchor" href="#axios拦截器">#</a> axios 拦截器</h2>
+<blockquote>
+<p>两类拦截器<br>
+ 1. 请求方向 (成功 / 失败)<br>
+ 2. 响应方向 (成功 / 失败)</p>
+</blockquote>
+<h3 id="拦截器的作用"><a class="markdownIt-Anchor" href="#拦截器的作用">#</a> 拦截器的作用</h3>
+<pre><code>&gt; 在网络请求在请求之前或者响应时，对操作进行相应处理
+</code></pre>
+<ol>
+<li>发起请求时，添加网页加载动画</li>
+<li>token 认证时，可以请求之前，可以做判断看是否有 token，然后进行相应操作，例如要求登录等</li>
+<li>响应时，可以进行相应的数据处理</li>
+</ol>
+<h4 id="请求方向拦截"><a class="markdownIt-Anchor" href="#请求方向拦截">#</a> 请求方向拦截</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">axios.interceptors.request.usr(congif&#x3D;&gt;&#123;</span><br><span class="line">    console.log(&quot;进入请求拦截器！&quot;)</span><br><span class="line">    &#x2F;&#x2F; config即请求的参数</span><br><span class="line">    console.log(&quot;config&quot;)</span><br><span class="line">    &#x2F;&#x2F; 拦截后需要返回</span><br><span class="line">    return config</span><br><span class="line">&#125;),err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(&quot;请求失败！&quot;)</span><br><span class="line">    console.log(&quot;err&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">axios.get(url).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="响应方向拦截"><a class="markdownIt-Anchor" href="#响应方向拦截">#</a> 响应方向拦截</h4>
+<blockquote>
+<p>响应到达浏览器之前做操作</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">axios.interceptors.response.usr(congif&#x3D;&gt;&#123;</span><br><span class="line">    console.log(&quot;进入响应拦截器！&quot;)</span><br><span class="line">    &#x2F;&#x2F; config即响应的参数</span><br><span class="line">    console.log(&quot;config&quot;)</span><br><span class="line">    &#x2F;&#x2F; 拦截后需要返回</span><br><span class="line">    return config</span><br><span class="line">&#125;),err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(&quot;相应失败！&quot;)</span><br><span class="line">    console.log(&quot;err&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">axios.get(url).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="axios在vue中的模块封装"><a class="markdownIt-Anchor" href="#axios在vue中的模块封装">#</a> axios 在 Vue 中的模块封装</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVFBNDExYjdUUj9wPTcmYW1wO3NwbV9pZF9mcm9tPXBhZ2VEcml2ZXI=">https://www.bilibili.com/video/BV1QA411b7TR?p=7&amp;spm_id_from=pageDriver</span></p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-06-21 15:11:49" itemprop="dateModified" datetime="2021-06-21T15:11:49+08:00">2021-06-21</time>
+  </span>
+  <span id="2021/06/21/axios/" class="item leancloud_visitors" data-flag-title="Axios" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Qi-Liang 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Qi-Liang <i class="ic i-at"><em>@</em></i>如果声音不记得｜我有万语千言｜藏在颤抖的字里行间
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2021/06/21/axios/" title="Axios">http://example.com/2021/06/21/axios/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/06/20/RESTful%E4%B8%8EFLASK/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicitzannuj20zk0m8b29.jpg" title="RESTful与FLASK">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>RESTful与FLASK</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2021/06/22/Vue3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeubcbajj20zk0m8h1h.jpg" title="Vue3">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Vue3</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#axios"><span class="toc-number">1.</span> <span class="toc-text"> Axios</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A5%E9%97%A8"><span class="toc-number">1.1.</span> <span class="toc-text"> 入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#axios%E5%B9%B6%E5%8F%91%E8%AF%B7%E6%B1%82"><span class="toc-number">1.2.</span> <span class="toc-text"> axios 并发请求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#axios%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.</span> <span class="toc-text"> axios 全局配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#axios%E5%AE%9E%E4%BE%8B"><span class="toc-number">1.4.</span> <span class="toc-text"> axios 实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#axios%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="toc-number">1.5.</span> <span class="toc-text"> axios 拦截器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%A6%E6%88%AA%E5%99%A8%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">1.5.1.</span> <span class="toc-text"> 拦截器的作用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E6%96%B9%E5%90%91%E6%8B%A6%E6%88%AA"><span class="toc-number">1.5.1.1.</span> <span class="toc-text"> 请求方向拦截</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E6%96%B9%E5%90%91%E6%8B%A6%E6%88%AA"><span class="toc-number">1.5.1.2.</span> <span class="toc-text"> 响应方向拦截</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#axios%E5%9C%A8vue%E4%B8%AD%E7%9A%84%E6%A8%A1%E5%9D%97%E5%B0%81%E8%A3%85"><span class="toc-number">1.6.</span> <span class="toc-text"> axios 在 Vue 中的模块封装</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Qi-Liang"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Qi-Liang</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">18</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">4</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">5</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpbGlhbmcxMDE1" title="https:&#x2F;&#x2F;github.com&#x2F;qiliang1015"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTMzNDk1NjA5Nw==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;334956097"><i class="ic i-cloud-music"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2021/06/20/RESTful%E4%B8%8EFLASK/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2021/06/22/Vue3/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/self-studies/" title="分类于 self-studies">self-studies</a>
+</div>
+
+    <span><a href="/2021/01/31/hexo-be-relevant/" title="hexo-be-relevant">hexo-be-relevant</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/06/20/RESTful%E4%B8%8EFLASK/" title="RESTful与FLASK">RESTful与FLASK</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/self-studies/" title="分类于 self-studies">self-studies</a>
+</div>
+
+    <span><a href="/2021/01/31/Markdown-be-relevant/" title="Markdown-be-relevant">Markdown-be-relevant</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/06/22/Vue3/" title="Vue3">Vue3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/self-studies/" title="分类于 self-studies">self-studies</a>
+</div>
+
+    <span><a href="/2021/06/22/ES6/" title="ES6">ES6</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/07/01/%E5%85%B3%E4%BA%8Ehttp%E7%8A%B6%E6%80%81%E7%A0%81%E9%82%A3%E4%BA%9B%E4%BA%8B/" title="关于http状态码那些事">关于http状态码那些事</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Begin/" title="分类于 Begin">Begin</a>
+</div>
+
+    <span><a href="/2021/01/29/hello-world/" title="First article">First article</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/06/21/axios/" title="Axios">Axios</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/self-studies/" title="分类于 self-studies">self-studies</a>
+</div>
+
+    <span><a href="/2021/06/24/Promise%E7%9B%B8%E5%85%B3/" title="Promise相关">Promise相关</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/07/01/%E5%89%8D%E7%AB%AF%E9%A2%98%E6%95%B4%E7%90%86/" title="前端题整理">前端题整理</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Qi-Liang @ QILIANG BLOG</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/06/21/axios/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Bulid-Blog</title>
+    <url>/2021/01/29/Bulid-Blog/</url>
+    <content><![CDATA[<h1 id="first-blog"><a class="markdownIt-Anchor" href="#first-blog">#</a> First Blog</h1>
+<h1 id="关于使用hexo和github的pages来进行博客制作的个人操作部分会逐渐补全整个过程"><a class="markdownIt-Anchor" href="#关于使用hexo和github的pages来进行博客制作的个人操作部分会逐渐补全整个过程">#</a> 关于使用 hexo 和 github 的 pages 来进行博客制作的个人操作部分，会逐渐补全整个过程！</h1>
+<h2 id="需要安装"><a class="markdownIt-Anchor" href="#需要安装">#</a> 需要安装</h2>
+<ol>
+<li>node.js 环境</li>
+</ol>
+<blockquote>
+<ol>
+<li>(<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL3poLWNuLw==">https://nodejs.org/zh-cn/</span>) 下载稳定版 (长期支持版) 即可</li>
+<li>安装一路 Next 即可，在选择安装目录时，可以自由选择</li>
+<li>安装完成，打开 cmd，输入 <code>node -v</code>  命令，如果显示版本号即证明安装成功</li>
+</ol>
+</blockquote>
+<ol start="2">
+<li>github 注册</li>
+</ol>
+<blockquote>
+<ol>
+<li>(<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLw==">https://github.com/</span>) sing up 注册即可</li>
+<li>点击右上角头像下有 <code>Create a new repository</code>  点击并进行创建仓库</li>
+<li>仓库名一定要以 <strong><span class="exturl" data-url="aHR0cDovL3huLS0yNnF3NGQxNHV1dGQ3eGtlMG11amMuZ2l0aHViLmlv">注册时的用户名.github.io</span></strong> 形式 (例如：<span class="exturl" data-url="aHR0cDovL3FpbGlhbmcxMDE1LmdpdGh1Yi5pbw==">qiliang1015.github.io</span>)，然后创建即可</li>
+</ol>
+<blockquote>
+<p>此处可以进行一个测试</p>
+<ol>
+<li>点击  <code>Create new file</code>  创建一个文件，命名为 index.html，并且写入</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是我的主页<span class="tag">&lt;/<span class="name">h1</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>然后在浏览器地址栏输入前面的仓库名，出现这是我的主页字样即可</li>
+</ol>
+</blockquote>
+</blockquote>
+<ol start="3">
+<li>git 安装</li>
+</ol>
+<blockquote>
+<ol>
+<li>(<span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZC93aW4=">https://git-scm.com/download/win</span>) 安装 git 工具</li>
+<li>安装一路 Next, 有 <code>Use Windows'default console window</code>  选项记得勾选，在选择安装目录时，可以自由选择</li>
+<li>安装完成，打开 cmd，输入 <code>git</code>  命令，如果显示相关命令帮助，即证明安装成功</li>
+</ol>
+</blockquote>
+<ol start="4">
+<li>github ssh 配置</li>
+</ol>
+<blockquote>
+<ol>
+<li>进入 git 安装目录下，打开 <code>git-bash.exe</code>  程序</li>
+<li>输入命令 <code>ssh-keygen -t rsa -C &quot;邮箱&quot;</code>  回车即可，不需输入其他东西</li>
+<li>打开 github，点击头像，进入 settings (设置), 点击 <code>SSH and GPG keys</code></li>
+<li>点击 New SSH，title 任意填写</li>
+<li>进入电脑的 系统盘 / 用户 / 当前电脑用户名 文件夹下，寻找.ssh 文件打开，进入并以记事本形式打开名为 <code>id_rsa.pub</code>  的文件，全部复制</li>
+<li>然后到 github 中新建的 ssh 中的 key 中粘贴即可，然后 Add SSH key</li>
+</ol>
+</blockquote>
+<ol start="4">
+<li>hexo 的本地使用</li>
+</ol>
+<blockquote>
+<ol>
+<li>(<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3Mv">https://hexo.io/zh-cn/docs/</span>) 搜索进入此网址</li>
+<li>本地新建一个存放博客的文件夹，打开 cmd 命令行，cd 到博客文件夹下执行 hexo 文档中的安装命令 <code>npm install hexo-cli -g</code></li>
+<li>输入 <code>hexo init 博客名</code> 进行初始化</li>
+<li>cd 到博客目录</li>
+<li>安装依赖，即输入 <code>npm install</code></li>
+<li>输入 <code>hexo s</code>  即可在本地运行，可以输入 <code>-p 5555</code>  等后缀改变访问端口，以防因端口占用问题出现错误等</li>
+<li>浏览器输入 localhost:5555 访问，即可看见 hexo 的默认博客</li>
+</ol>
+</blockquote>
+<ol start="5">
+<li>
+<p>安装任意编辑器一个，以供修改文件等，推荐 vscode，可直接搜索下载安装</p>
+</li>
+<li>
+<p>hexo 发布到 github</p>
+</li>
+</ol>
+<blockquote>
+<ol>
+<li>以编辑器打开博客目录下的 <code>_config.yml</code>  文件</li>
+<li>打开 github，进入仓库，将仓库下载的链接进行复制</li>
+<li>在 yml 文件最下方，有 deploy 属性，在此属性下再添加一条 <code>reop:仓库地址</code> 和 <code>branch:master</code></li>
+<li>在上方寻找 url 属性，将其 // 后的内容修改成仓库名称，(如：<span class="exturl" data-url="aHR0cHM6Ly9xaWxpYW5nMDEwMi5naXRodWIuaW8=">https://qiliang0102.github.io</span>)</li>
+<li>在博客目录下通过 cmd 输入 <code>npm install hexo-deployer-git --save</code>  安装此插件</li>
+<li>然后输入 <code>hexo g</code>  生成</li>
+<li>然后输入 <code>hexo d</code>  提交到 GitHub</li>
+<li>会提示配置 github 信息<br>
+输入   <code>git config --global user.email &quot;邮箱&quot; 然后回车 输入  </code> git config --global <span class="exturl" data-url="aHR0cDovL3VzZXIubmFtZQ==">user.name</span> “用户名” 然后回车</li>
+<li>输入  <code>hexo d</code>  提示输入 github 用户名密码，输入即可</li>
+<li>命令行最后显示 <code> INFO Deploy done:git</code>  即成功</li>
+<li>浏览器访问之前的仓库名 (如：<span class="exturl" data-url="aHR0cDovL3FpbGlhbmcwMTAyLmdpdGh1Yi5pbw==">qiliang0102.github.io</span>)，即可看到 hexo 博客主页</li>
+</ol>
+</blockquote>
+<h2 id="hexo主题预览"><a class="markdownIt-Anchor" href="#hexo主题预览">#</a> hexo 主题预览</h2>
+<blockquote>
+<p>(<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3RoZW1lcw==">https://hexo.io/themes</span>) 主题地址</p>
+</blockquote>
+<ol>
+<li>选择自己喜欢的主题，打开可以预览</li>
+</ol>
+<h2 id="hexo之next主题使用"><a class="markdownIt-Anchor" href="#hexo之next主题使用">#</a> hexo 之 next 主题使用</h2>
+<blockquote>
+<ol>
+<li>主题官网搜索 next，进入 github 源码，将主题下载下来</li>
+<li>进入博客目录的.config.yml 文件 寻找 theme 属性，将值修改成主题名，如： <code>theme:next</code></li>
+<li>将下载的主题文件 (若是压缩包，请自行解压)，文件夹名称修改成 next，将文件夹复制到博客目录下的 themes 文件夹中</li>
+<li>命令行 cd 到博客目录下，输入 <code>hexo g</code>  生成，然后输入 <code>hexo s</code>  本地预览下，可以看到主题已经有变化了</li>
+<li>具体有关于 next 模板的使用及内容修改请查看 next 主题文档 (<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lmlpc3NuYW4uY29tLw==">https://theme-next.iissnan.com/</span>)</li>
+<li>经由修改等操作后，即可 <code>hexo g -d</code>  上传到 github</li>
+</ol>
+</blockquote>
+<p><strong>以上即是 hexo+github 创建博客的流程，需要一些基础知识，所有有关文件设置的内容，请千万记得保存！</strong><br>
+<strong>关于以上流程有任何疑问，可留言到文章下方！</strong></p>
+]]></content>
+      <categories>
+        <category>Blog-Build</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>First article</title>
+    <url>/2021/01/29/hello-world/</url>
+    <content><![CDATA[<h1 id="欢迎来到我的博客感谢有你"><a class="markdownIt-Anchor" href="#欢迎来到我的博客感谢有你">#</a> 欢迎来到我的博客，感谢有你！</h1>
+<p>Welcome to my blog！</p>
+]]></content>
+      <categories>
+        <category>Begin</category>
+      </categories>
+      <tags>
+        <tag>杂乱无章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo-be-relevant</title>
+    <url>/2021/01/31/hexo-be-relevant/</url>
+    <content><![CDATA[<h1 id="hexo命令汇总"><a class="markdownIt-Anchor" href="#hexo命令汇总">#</a> hexo 命令汇总</h1>
+<h3 id="基础命令"><a class="markdownIt-Anchor" href="#基础命令">#</a> 基础命令</h3>
+<h5 id="创建一篇文章"><a class="markdownIt-Anchor" href="#创建一篇文章">#</a> 创建一篇文章：</h5>
+<pre><code>hexo n Article-name (即可创建一篇blog文章)
+</code></pre>
+]]></content>
+      <categories>
+        <category>self-studies</category>
+      </categories>
+      <tags>
+        <tag>knowledge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown-be-relevant</title>
+    <url>/2021/01/31/Markdown-be-relevant/</url>
+    <content><![CDATA[<h1 id="markdown-入门"><a class="markdownIt-Anchor" href="#markdown-入门">#</a> Markdown 入门</h1>
+<h2 id="markdown-代码"><a class="markdownIt-Anchor" href="#markdown-代码">#</a> Markdown 代码</h2>
+<h3 id="标题"><a class="markdownIt-Anchor" href="#标题">#</a> 标题</h3>
+<pre><code>Markdown 标题有两种格式,但是此处只介绍#号标记
+使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。
+</code></pre>
+<h3 id="段落"><a class="markdownIt-Anchor" href="#段落">#</a> 段落</h3>
+<pre><code>Markdown 段落没有特殊的格式，直接编写文字就好，段落的换行是使用两个以上空格加上回车。
+</code></pre>
+<h4 id="字体"><a class="markdownIt-Anchor" href="#字体">#</a> 字体</h4>
+<pre><code>Markdown 可以使用以下几种字体：
+    *斜体文本*
+    _斜体文本_
+    **粗体文本**
+    __粗体文本__
+    ***粗斜体文本***
+    ___粗斜体文本___
+</code></pre>
+<h4 id="分割线"><a class="markdownIt-Anchor" href="#分割线">#</a> 分割线</h4>
+<pre><code>可以在一行中用3个以上的*,-来建立分割线，也可以在其中穿插空格：
+* * * * 
+</code></pre>
+<h4 id="删除线"><a class="markdownIt-Anchor" href="#删除线">#</a> 删除线</h4>
+<pre><code>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可：
+~~删除内容~~
+</code></pre>
+<h4 id="下划线"><a class="markdownIt-Anchor" href="#下划线">#</a> 下划线</h4>
+<pre><code>下划线可以通过 HTML 的 &lt;u&gt; 标签来实现：
+&lt;u&gt;带下划线文本&lt;/u&gt;
+</code></pre>
+<h4 id="脚注"><a class="markdownIt-Anchor" href="#脚注">#</a> 脚注</h4>
+<pre><code>脚注是对文本的补充说明，格式：
+[^要注明的文本]
+</code></pre>
+<h3 id="列表"><a class="markdownIt-Anchor" href="#列表">#</a> 列表</h3>
+<pre><code>支持有序列表与无序列表
+</code></pre>
+<h4 id="无序列表"><a class="markdownIt-Anchor" href="#无序列表">#</a> 无序列表</h4>
+<pre><code>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记，这些标记后面要添加一个空格，然后再填写内容
+* 第一项
+* 第二项
+* 第三项
+
++ 第一项
++ 第二项
++ 第三项
+
+- 第一项
+- 第二项
+- 第三项
+</code></pre>
+<h4 id="有序列表"><a class="markdownIt-Anchor" href="#有序列表">#</a> 有序列表</h4>
+<pre><code>有序列表使用数字加上 . 号来表示
+1. 第一项
+2. 第二项
+3. 第三项
+</code></pre>
+<h4 id="列表嵌套"><a class="markdownIt-Anchor" href="#列表嵌套">#</a> 列表嵌套</h4>
+<pre><code>列表嵌套只需在子列表中的选项前面添加四个空格即可：
+1. 第一项：
+    - 第一项嵌套的第一个元素
+    - 第一项嵌套的第二个元素
+2. 第二项：
+    - 第二项嵌套的第一个元素
+    - 第二项嵌套的第二个元素
+</code></pre>
+<h3 id="区块"><a class="markdownIt-Anchor" href="#区块">#</a> 区块</h3>
+<pre><code>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号
+</code></pre>
+<h4 id="嵌套区块"><a class="markdownIt-Anchor" href="#嵌套区块">#</a> 嵌套区块</h4>
+<pre><code>区块是可以嵌套的，一个 &gt; 符号是最外层，两个 &gt; 符号是第一层嵌套，以此类推
+</code></pre>
+<h4 id="区块中列表"><a class="markdownIt-Anchor" href="#区块中列表">#</a> 区块中列表</h4>
+<pre><code>区块中插入使用列表：
+&gt; 区块中使用列表
+&gt; 1. 第一项
+&gt; 2. 第二项
+&gt; + 第一项
+&gt; + 第二项
+&gt; + 第三项
+</code></pre>
+<h4 id="列表中区块"><a class="markdownIt-Anchor" href="#列表中区块">#</a> 列表中区块</h4>
+<pre><code>列表中插入使用区块：
+* 第一项
+    &gt; 菜鸟教程
+    &gt; 学的不仅是技术更是梦想
+* 第二项
+</code></pre>
+<h3 id="代码块"><a class="markdownIt-Anchor" href="#代码块">#</a> 代码块</h3>
+<h4 id="代码小段"><a class="markdownIt-Anchor" href="#代码小段">#</a> 代码小段</h4>
+<pre><code>如果是段落上的一个函数或片段的代码可以用反引号( ` )包起来。
+例如：
+    [`print()`]
+</code></pre>
+<h4 id="代码区块"><a class="markdownIt-Anchor" href="#代码区块">#</a> 代码区块</h4>
+<pre><code>代码区块使用4个空格或者一个制表符(Tab键)。   
+或者是用```包裹一段代码，并且指定一种语言(也可以不指定)
+例如：
+    [```javascript
+        $(document).ready(function () &#123;
+            alert('RUNOOB');
+        &#125;);
+    ```]
+</code></pre>
+<h3 id="链接"><a class="markdownIt-Anchor" href="#链接">#</a> 链接</h3>
+<pre><code>链接使用方法如下：
+[链接名称](链接地址)
+或者
+&lt;链接地址&gt;
+</code></pre>
+<h4 id="高级链接"><a class="markdownIt-Anchor" href="#高级链接">#</a> 高级链接</h4>
+<pre><code>可以通过一个变量设置连接，变量可以在文档最后赋值：
+这个链接用 1 作为网址变量 [Google][1]
+这个链接用 runoob 作为网址变量 [Runoob][runoob]
+然后在文档的结尾为变量赋值（网址）
+
+[1]: http://www.google.com/
+[runoob]: http://www.runoob.com/
+</code></pre>
+<h3 id="图片"><a class="markdownIt-Anchor" href="#图片">#</a> 图片</h3>
+<pre><code>图片格式：
+![alt 属性文本](图片地址)
+以及
+![alt 属性文本](图片地址 &quot;可选标题&quot;)
+
+也可以类似于使用链接一样，使用变量来加入图片
+
+图片宽高无法设定，此处可以使用html的&lt;img&gt;标签
+</code></pre>
+<h3 id="表格"><a class="markdownIt-Anchor" href="#表格">#</a> 表格</h3>
+<pre><code>语法格式：
+|  表头   | 表头  |
+|  ----  | ----  |
+| 单元格  | 单元格 |
+| 单元格  | 单元格 |
+</code></pre>
+<h4 id="表格对齐方式"><a class="markdownIt-Anchor" href="#表格对齐方式">#</a> 表格对齐方式</h4>
+<pre><code>-: 设置内容和标题栏居右对齐
+:- 设置内容和标题栏居左对齐
+:-: 设置内容和标题栏居中对齐
+写法：
+| 左对齐 | 右对齐 | 居中对齐 |
+| :-----| ----: | :----: |
+| 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 |
+</code></pre>
+<h2 id="最后"><a class="markdownIt-Anchor" href="#最后">#</a> 最后</h2>
+<p>Markdown 还有众多高级技巧，可以访问官方文档进行详细查看<br>
+并且极其 * n 推荐使用 Typora 这个软件去使用 Markdown<br>
+ 下载地址：<span class="exturl" data-url="aHR0cHM6Ly90eXBvcmEuaW8=">Typora 官方下载</span></p>
+]]></content>
+      <categories>
+        <category>self-studies</category>
+      </categories>
+      <tags>
+        <tag>knowledge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript-be-relevant</title>
+    <url>/2021/03/01/JavaScript-be-relevant/</url>
+    <content><![CDATA[<h1 id="javascript"><a class="markdownIt-Anchor" href="#javascript">#</a> JavaScript</h1>
+<h2 id="js基础"><a class="markdownIt-Anchor" href="#js基础">#</a> js 基础</h2>
+<blockquote>
+<p>浏览器脚本语言，每个浏览器都有 js 的解析器，只需解析就可执行<br>
+ JavaScript = ECMAScript + JavaScript (DOM &amp; BOM)</p>
+</blockquote>
+<h3 id="基本语法"><a class="markdownIt-Anchor" href="#基本语法">#</a> 基本语法</h3>
+<ol>
+<li>html + js 结合方式
+<ol>
+<li>内嵌式</li>
+</ol>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>外联式</li>
+</ol>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;.&#x2F;.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li>数据类型
+<ol>
+<li>number   数字 可以是整数 / 小数 / NaN (不是数字的数字类型)</li>
+<li>string   字符类型</li>
+<li>boolean  true &amp; false</li>
+<li>null 空</li>
+<li>undefined    未定义，变量未定义访问显示结果</li>
+</ol>
+<blockquote>
+<p>查看类型方法 typeof ( )</p>
+</blockquote>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>Ajax学习</title>
+    <url>/2021/03/14/Ajax%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="ajax"><a class="markdownIt-Anchor" href="#ajax">#</a> Ajax</h1>
+<h2 id="ajax简介"><a class="markdownIt-Anchor" href="#ajax简介">#</a> Ajax 简介</h2>
+<p>Ajax 就是异步的 JS 和 XML。</p>
+<h2 id="ajax特点"><a class="markdownIt-Anchor" href="#ajax特点">#</a> Ajax 特点</h2>
+<h3 id="ajax优点"><a class="markdownIt-Anchor" href="#ajax优点">#</a> Ajax 优点</h3>
+<ol>
+<li>可以不用刷新就提交请求并获得结果。</li>
+<li>可以根据事件更新部分页面内容。</li>
+</ol>
+<h3 id="ajax缺点"><a class="markdownIt-Anchor" href="#ajax缺点">#</a> Ajax 缺点</h3>
+<ol>
+<li>没有浏览记录，不可以回退。</li>
+<li>存在跨域问题（也就是不能往另一个网页去提交请求）。</li>
+<li>seo（搜索引擎优化）不友好，没办法通过爬虫 / 源代码之类的获取到内容，是通过 ajax 请求并获取结果通过 js 动态创建的。</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>html/css-be-relevant</title>
+    <url>/2021/03/08/html-css-be-relevant/</url>
+    <content><![CDATA[<h1 id="html"><a class="markdownIt-Anchor" href="#html">#</a> HTML</h1>
+<h2 id="html概念"><a class="markdownIt-Anchor" href="#html概念">#</a> html 概念</h2>
+<p>html 全称 HyperText Markup Language 超文本标记语言。</p>
+<blockquote>
+<ol>
+<li>有一套标记标签。例如:   <code>&lt;a&gt;&lt;/a&gt;</code>  表示超链接， <code>&lt;img /&gt;</code>  表示图片， <code>&lt;h2&gt;&lt;/h2&gt;</code>  表示二级标题等，都属于 html 标签。</li>
+<li>编程语言有编译过程，而标记语言没有编译过程，html 标签是直接由浏览器解析执行。</li>
+</ol>
+</blockquote>
+<p>网页是由网页元素组成，这些元素是由 html 标签描述出来，然后通过浏览器解析，显示给用户看。</p>
+<blockquote>
+<p>html 基础骨架</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<p>在 body 区域添加正文即可简单构成 html 页面</p>
+<h2 id="html结构详解"><a class="markdownIt-Anchor" href="#html结构详解">#</a> html 结构详解</h2>
+<blockquote>
+<p>html 标签通常是成对出现 (双边标记)，当然也有少部分单标签 (单边标记)。属性与标记之间，各属性之间需要以空格隔开。属性值以双引号括起来。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">标签名</th>
+<th style="text-align:center">定义</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;html&gt;&lt;/html&gt;</code></td>
+<td style="text-align:center">html 标签</td>
+<td style="text-align:center">页面中最大的标签，称为根标签</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;head&gt;&lt;/head&gt;</code></td>
+<td style="text-align:center">文档的头部标签</td>
+<td style="text-align:center">注意在 head 标签中我们必须要设置的标签是 title</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;titile&gt;&lt;/titile&gt;</code></td>
+<td style="text-align:center">文档的标题标签</td>
+<td style="text-align:center">让页面拥有一个属于自己的网页标题</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;body&gt;&lt;/body&gt;</code></td>
+<td style="text-align:center">文档的主题标签</td>
+<td style="text-align:center">元素包含文档的所有内容，页面内容 基本都是放到 body 里面的</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>文档声明头：<br>
+任何一个标准的 HTML 页面，第一行一定是一个以 <code>&lt;!DOCTYPE ……&gt;</code>  开头的语句。这一行，就是文档声明头，即 DocType Declaration，简称 DTD。</p>
+</li>
+<li>
+<p>页面语言 <code>lang</code> <br>
+ 下面这行标签，用于指定页面的语言类型：<br>
+ <code>&lt;html lang=&quot;en&quot;&gt;</code> <br>
+ 最常见的语言类型有两种：</p>
+<blockquote>
+<p>en：定义页面语言为英语。<br>
+zh-CN：定义页面语言为中文。</p>
+</blockquote>
+</li>
+<li>
+<p>头标签 <code>head</code></p>
+<blockquote>
+<ol>
+<li>meat 标签:<br>
+meat 表示 &quot;元&quot;。&quot;元&quot; 配置，就是表示基本的配置项目。</li>
+<li>title 标签:<br>
+ 用于设置网页标题  <code>&lt;title&gt;网页标题&lt;/title&gt;</code></li>
+<li>base 标签:<br>
+base 标签用于指定基础的路径。指定之后，所有的 a 链接都是以这个路径为基准。</li>
+</ol>
+</blockquote>
+</li>
+<li>
+<p><code>&lt;body&gt;</code>  标签<br>
+ <code>&lt;body&gt;</code>  标签的属性有：</p>
+<blockquote>
+<p>bgcolor：设置整个网页的背景颜色。<br>
+background：设置整个网页的背景图片。<br>
+text：设置网页中的文本颜色。<br>
+leftmargin：网页的左边距。IE 浏览器默认是 8 个像素。<br>
+topmargin：网页的上边距。<br>
+rightmargin：网页的右边距。<br>
+bottommargin：网页的下边距。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="html的注意"><a class="markdownIt-Anchor" href="#html的注意">#</a> html 的注意</h2>
+<ol>
+<li>html 对换行不敏敢，对 tab 不敏感<br>
+ HTML 只在乎标签的嵌套结构，嵌套的关系。谁嵌套了谁，谁被谁嵌套了，和换行、tab 无关。换不换行、tab 不 tab，都不影响页面的结构。</li>
+<li>空白折叠效果<br>
+ HTML 中所有的文字之间，如果有空格、换行、tab 都将被折叠为一个空格显示。</li>
+<li>标签要严格封闭<br>
+标签不封闭的结果是灾难性的。</li>
+</ol>
+<p>还有众多标签特性可以在使用时详细了解。</p>
+<h1 id="css"><a class="markdownIt-Anchor" href="#css">#</a> CSS</h1>
+<h2 id="选择器"><a class="markdownIt-Anchor" href="#选择器">#</a> 选择器</h2>
+<blockquote>
+<p>ID CLASS 标签<br>
+子（后）代，相邻，兄弟<br>
+ css3 新增选择器</p>
+</blockquote>
+<h2 id="属性-值和单位-字体-文本-背景和颜色"><a class="markdownIt-Anchor" href="#属性-值和单位-字体-文本-背景和颜色">#</a> 属性 -&gt; 值和单位 -&gt; 字体 -&gt; 文本 -&gt; 背景和颜色</h2>
+<h2 id="定位"><a class="markdownIt-Anchor" href="#定位">#</a> 定位</h2>
+<blockquote>
+<p>static<br>
+relative<br>
+fixed<br>
+absolute<br>
+sticky</p>
+</blockquote>
+<h2 id="盒模型"><a class="markdownIt-Anchor" href="#盒模型">#</a> 盒模型</h2>
+<blockquote>
+<p>标准盒模型<br>
+怪异盒模型</p>
+</blockquote>
+<h2 id="常用布局"><a class="markdownIt-Anchor" href="#常用布局">#</a> 常用布局</h2>
+<blockquote>
+<p>基本：网格，浮动，flxe，grid<br>
+ 方式：单列，两列 &amp; 三列，水平和垂直居中，圣杯布局，双飞翼</p>
+</blockquote>
+<h2 id="伪类和伪元素"><a class="markdownIt-Anchor" href="#伪类和伪元素">#</a> 伪类和伪元素</h2>
+<h2 id="预处理器"><a class="markdownIt-Anchor" href="#预处理器">#</a> 预处理器</h2>
+<blockquote>
+<p>less<br>
+scss<br>
+stylus<br>
+ 后处理器 postcss</p>
+</blockquote>
+<h2 id="bfc"><a class="markdownIt-Anchor" href="#bfc">#</a> BFC</h2>
+<h2 id="css3"><a class="markdownIt-Anchor" href="#css3">#</a> CSS3</h2>
+<h3 id="基础"><a class="markdownIt-Anchor" href="#基础">#</a> 基础</h3>
+<h4 id="边框和阴影"><a class="markdownIt-Anchor" href="#边框和阴影">#</a> 边框和阴影</h4>
+<blockquote>
+<p>border-radius，box-shadow，border-image</p>
+</blockquote>
+<h4 id="渐变"><a class="markdownIt-Anchor" href="#渐变">#</a> 渐变</h4>
+<blockquote>
+<p>Linear Gradients 和 Radial Gradients</p>
+</blockquote>
+<h4 id="文本"><a class="markdownIt-Anchor" href="#文本">#</a> 文本</h4>
+<blockquote>
+<p>text-shadow，text-overflow，word-wrap</p>
+</blockquote>
+<h4 id="转换"><a class="markdownIt-Anchor" href="#转换">#</a> 转换</h4>
+<blockquote>
+<p>2D/3D</p>
+</blockquote>
+<h3 id="进阶"><a class="markdownIt-Anchor" href="#进阶">#</a> 进阶</h3>
+<h4 id="过渡transition"><a class="markdownIt-Anchor" href="#过渡transition">#</a> 过渡：transition</h4>
+<h4 id="动画帧动画硬件gpu加速"><a class="markdownIt-Anchor" href="#动画帧动画硬件gpu加速">#</a> 动画：帧动画，硬件 GPU 加速</h4>
+]]></content>
+      <categories>
+        <category>self-studies</category>
+      </categories>
+      <tags>
+        <tag>knowledge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>webpack</title>
+    <url>/2021/03/18/webpack/</url>
+    <content><![CDATA[<h1 id="webpack"><a class="markdownIt-Anchor" href="#webpack">#</a> webpack</h1>
+]]></content>
+  </entry>
+  <entry>
+    <title>nginx+flask+python+uWsgi部署服务</title>
+    <url>/2021/06/10/nginx-flask-python-uWsgi%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<h1 id="nginx"><a class="markdownIt-Anchor" href="#nginx">#</a> Nginx</h1>
+<h2 id="nginx可以做什么"><a class="markdownIt-Anchor" href="#nginx可以做什么">#</a> Nginx 可以做什么？</h2>
+<ol>
+<li>静态 HTTP 服务器</li>
+</ol>
+<blockquote>
+<p>如同正常的静态服务器一样，通过 HTTP 协议将静态文件通过端口展现</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen80; #端口号</span><br><span class="line">    location &#x2F;&#123;</span><br><span class="line">        root &#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html; #静态文件路径</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>反向代理服务器
+<ol>
+<li>反向代理？</li>
+</ol>
+<blockquote>
+<p><strong>正向代理代理客户端，反向代理代理服务器</strong><br>
+客户端通过协议直接访问服务器，中间配置 nginx，客户端请求 nginx，nginx 请求服务器，然后结果返回，此时 nginx 就是反向代理服务器</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen80;</span><br><span class="line">    location &#x2F; &#123;</span><br><span class="line">        proxy_pass http:192.168.20.1:8080; # 应用服务器HTTP地址</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>负载均衡</li>
+<li>虚拟主机</li>
+</ol>
+<h1 id="uwsgi"><a class="markdownIt-Anchor" href="#uwsgi">#</a> uWsgi</h1>
+<h2 id="uwsgi可以做什么"><a class="markdownIt-Anchor" href="#uwsgi可以做什么">#</a> uWsgi 可以做什么？</h2>
+]]></content>
+      <categories>
+        <category>config配置</category>
+      </categories>
+      <tags>
+        <tag>认知</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RESTful与FLASK</title>
+    <url>/2021/06/20/RESTful%E4%B8%8EFLASK/</url>
+    <content><![CDATA[<h1 id="restful与flask"><a class="markdownIt-Anchor" href="#restful与flask">#</a> RESTful 与 Flask</h1>
+<h2 id="restful"><a class="markdownIt-Anchor" href="#restful">#</a> RESTful</h2>
+<h3 id="restful起源及设计理念"><a class="markdownIt-Anchor" href="#restful起源及设计理念">#</a> RESTful 起源及设计理念</h3>
+<ol>
+<li>资源与 URI 和 URL
+<ol>
+<li>资源 resources 网络上的具体信息</li>
+<li>URI uniform resource identifier 统一资源标识符。用来唯一的标识一个资源</li>
+<li>URL uniform resouce locator 统一资源定位器，用来定位某个特定资源</li>
+</ol>
+</li>
+<li>表现层<br>
+有多种表现形式
+<ol>
+<li>纯文本</li>
+<li>HTML</li>
+<li>JSON</li>
+</ol>
+</li>
+<li>状态转移 state transfer
+<ol>
+<li>HTTP 协议，是一个无状态协议，意味着所有的状态需要保存到服务器</li>
+<li>GET (获取)、POST (增加)、PUT (增加)、DELETE (删除)</li>
+</ol>
+</li>
+<li>REST 构架设计 6 原则
+<ol>
+<li>Uniform Interface 统一接口<br>
+包括设计客户端和服务端的接口，能使其独立更新修改升级</li>
+<li>Stateless 无状态<br>
+应该向每次请求响应都是自包含，避免本次依赖上次，客户端对服务端的操作完全由表现层进行，即使没有把整个数据库表现出，也要允许通过 delete 删除资源，并且在一次操作中完成</li>
+<li>可缓存的<br>
+可以提高客户端的访问体验，还可以减少服务端的流量压力</li>
+<li>服务端 客户端分离<br>
+客户端不包括数据，服务端不包括用户状态，增加服务稳定性，可以对任意一端进行升级</li>
+<li>客户端不直接连接服务端，可以通过其他链接，客户端也可以是某一个服务端，作为中间的服务端请求另一个服务端</li>
+<li>按需编码，由于两端只通过接口通信，可以使用不同语言</li>
+</ol>
+</li>
+</ol>
+<h2 id="flask"><a class="markdownIt-Anchor" href="#flask">#</a> Flask</h2>
+<blockquote>
+<p>微型框架，表示保持核心简单，但是可扩展，Flask 不会替你做决定，数据库，引擎都任意，Flask 可以变成你任何想要的东西，不会变成任何你不想要的东西，一切由你做主</p>
+</blockquote>
+<h3 id="安装"><a class="markdownIt-Anchor" href="#安装">#</a> 安装</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">安装</span><br><span class="line">pip install flask</span><br><span class="line">导入</span><br><span class="line">import flask</span><br></pre></td></tr></table></figure>
+<p>可以访问<span class="exturl" data-url="aHR0cHM6Ly9mbGFzay5wYWxsZXRzcHJvamVjdHMuY29tL2VuLzIuMC54Lw=="> Flask 官网</span>了解详情</p>
+<h3 id="flask开始"><a class="markdownIt-Anchor" href="#flask开始">#</a> Flask 开始</h3>
+<blockquote>
+<p>以下就是一个简单的 flask 的 app</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from flask import Flask</span><br><span class="line"></span><br><span class="line">app &#x3D; Flask(__name__)</span><br><span class="line"></span><br><span class="line">@app.route(&#39;&#x2F;&#39;)</span><br><span class="line">def hello_world():</span><br><span class="line">    return &#39;hello restful&#39;</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    app.run()</span><br><span class="line"># 可以输入参数，进入debug模式</span><br><span class="line"># 例如 app.run(debug &#x3D; True)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>可以通过添加 methods 指定 http 请求方式</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 只接受GET POST请求</span><br><span class="line">@app.route(&#39;&#x2F;&#39;,methods&#x3D;[&#39;GET&#39;,&#39;POST&#39;])</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>Axios</title>
+    <url>/2021/06/21/axios/</url>
+    <content><![CDATA[<h1 id="axios"><a class="markdownIt-Anchor" href="#axios">#</a> Axios</h1>
+<blockquote>
+<p>axios 基于 promise 对 Ajax 的封装</p>
+</blockquote>
+<h2 id="入门"><a class="markdownIt-Anchor" href="#入门">#</a> 入门</h2>
+<ol>
+<li>使用方式</li>
+</ol>
+<blockquote>
+<ol>
+<li>npm 安装<br>
+ <code>npm install --save axios</code></li>
+<li>cdn 引入<br>
+ <code>&lt;script src=&quot;https://unpkg.com/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;</code></li>
+</ol>
+</blockquote>
+<ol start="2">
+<li>简单的 axios 请求</li>
+</ol>
+<blockquote>
+<p>默认方式请求 (无参)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    url:&#39;url&#39;</span><br><span class="line">&#125;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>默认方式 GET 请求 (无参)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    url:&#39;url&#39;,</span><br><span class="line">    method:&#39;get&#39;</span><br><span class="line">&#125;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>默认方式 GET 请求 (有参)<br>
+ 将参数附带在 url 地址后，需要添加？，然后将参数以键值对附带</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    url:&#39;url?id&#x3D;1&#39;,</span><br><span class="line">&#x2F;&#x2F; 可以添加params,然后以键值对携带参数，就可不用?参数的形式</span><br><span class="line">&#x2F;&#x2F;    params:&#123;</span><br><span class="line">&#x2F;&#x2F;        id : &quot;1&quot;,</span><br><span class="line">&#x2F;&#x2F;        name: &quot;qiliang&quot;</span><br><span class="line">&#x2F;&#x2F;    &#125;,</span><br><span class="line">    method:&#39;get&#39;</span><br><span class="line">&#125;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>默认方式 POST 请求 (无参)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    url:&#39;&#39;,</span><br><span class="line">    method:&#39;post&#39;</span><br><span class="line">&#125;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>默认方式 POST 请求 (有参)<br>
+ 默认的 axios 有参 POST 请求 data 是发送 application/json 格式<br>
+可以修改成 params 参数发送方式，实际是以连接到 url 后方式发送</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    url:&#39;&#39;,</span><br><span class="line">    method:&#39;post&#39;,</span><br><span class="line">    params:&#123;</span><br><span class="line">        id:&quot;1&quot;,</span><br><span class="line">        name:&quot;qiliang&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>使用 get ()，post () 方式请求</li>
+</ol>
+<blockquote>
+<p>使用 axios.get () 发送无参请求</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">axios.get(url).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;).catch(err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用 axios.get () 发送有参请求</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">axios.get(url,&#123;params:&#123;id:1,name&#x3D;&quot;qiliang&quot;&#125;&#125;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;).catch(err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用 axios.post () 发送无参请求</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">axios.post(url).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;).catch(err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用 axios.post () 发送有参请求</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">axios.post(url,&quot;id&#x3D;1&amp;name&#x3D;qiliang&quot;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;).catch(err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="axios并发请求"><a class="markdownIt-Anchor" href="#axios并发请求">#</a> axios 并发请求</h2>
+<blockquote>
+<p>第一种方式处理<br>
+请求响应回来的是数组，可以通过 res [0],res [1] 的方式分开</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">axios.all([</span><br><span class="line">    axios.get(url1),</span><br><span class="line">    axios.get(url2,&#123;params:&#123;id:1&#125;&#125;)</span><br><span class="line">]).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res[0])</span><br><span class="line">    console.log(res[1])</span><br><span class="line">&#125;).catch(err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>第二种方式处理<br>
+请求响应回来的是数组，可以通过 axios.spread () 处理</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">axios.all([</span><br><span class="line">    axios.get(url1),</span><br><span class="line">    axios.get(url2,&#123;params:&#123;id:1&#125;&#125;)</span><br><span class="line">]).then(</span><br><span class="line">    axios.spread((res1,res2)&#x3D;&gt;&#123;</span><br><span class="line">        console.log(res1)</span><br><span class="line">        console.log(res2)</span><br><span class="line">    &#125;)</span><br><span class="line">).catch(err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="axios全局配置"><a class="markdownIt-Anchor" href="#axios全局配置">#</a> axios 全局配置</h2>
+<blockquote>
+<p>公共部分提取并全局配置</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">axios.defaults.baseURL &#x3D; url</span><br><span class="line">axios.defaults.timeout &#x3D; 5000</span><br><span class="line">&#x2F;&#x2F; 将公共部分全局配置后，请求中可直接写url后面路由部分</span><br><span class="line">axios.get(&#39;route&#39;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="axios实例"><a class="markdownIt-Anchor" href="#axios实例">#</a> axios 实例</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 创建axios的实例 </span><br><span class="line">let newVar &#x3D; axios.create(&#123;</span><br><span class="line">    baseURL:url,</span><br><span class="line">    timeout:5000</span><br><span class="line">&#125;)</span><br><span class="line">newVar(&#123;</span><br><span class="line">    url:url</span><br><span class="line">&#125;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;).catch(err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="axios拦截器"><a class="markdownIt-Anchor" href="#axios拦截器">#</a> axios 拦截器</h2>
+<blockquote>
+<p>两类拦截器<br>
+ 1. 请求方向 (成功 / 失败)<br>
+ 2. 响应方向 (成功 / 失败)</p>
+</blockquote>
+<h3 id="拦截器的作用"><a class="markdownIt-Anchor" href="#拦截器的作用">#</a> 拦截器的作用</h3>
+<pre><code>&gt; 在网络请求在请求之前或者响应时，对操作进行相应处理
+</code></pre>
+<ol>
+<li>发起请求时，添加网页加载动画</li>
+<li>token 认证时，可以请求之前，可以做判断看是否有 token，然后进行相应操作，例如要求登录等</li>
+<li>响应时，可以进行相应的数据处理</li>
+</ol>
+<h4 id="请求方向拦截"><a class="markdownIt-Anchor" href="#请求方向拦截">#</a> 请求方向拦截</h4>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">axios.interceptors.request.usr(congif&#x3D;&gt;&#123;</span><br><span class="line">    console.log(&quot;进入请求拦截器！&quot;)</span><br><span class="line">    &#x2F;&#x2F; config即请求的参数</span><br><span class="line">    console.log(&quot;config&quot;)</span><br><span class="line">    &#x2F;&#x2F; 拦截后需要返回</span><br><span class="line">    return config</span><br><span class="line">&#125;),err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(&quot;请求失败！&quot;)</span><br><span class="line">    console.log(&quot;err&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">axios.get(url).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="响应方向拦截"><a class="markdownIt-Anchor" href="#响应方向拦截">#</a> 响应方向拦截</h4>
+<blockquote>
+<p>响应到达浏览器之前做操作</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">axios.interceptors.response.usr(congif&#x3D;&gt;&#123;</span><br><span class="line">    console.log(&quot;进入响应拦截器！&quot;)</span><br><span class="line">    &#x2F;&#x2F; config即响应的参数</span><br><span class="line">    console.log(&quot;config&quot;)</span><br><span class="line">    &#x2F;&#x2F; 拦截后需要返回</span><br><span class="line">    return config</span><br><span class="line">&#125;),err&#x3D;&gt;&#123;</span><br><span class="line">    console.log(&quot;相应失败！&quot;)</span><br><span class="line">    console.log(&quot;err&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">axios.get(url).then(res&#x3D;&gt;&#123;</span><br><span class="line">    console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="axios在vue中的模块封装"><a class="markdownIt-Anchor" href="#axios在vue中的模块封装">#</a> axios 在 Vue 中的模块封装</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVFBNDExYjdUUj9wPTcmYW1wO3NwbV9pZF9mcm9tPXBhZ2VEcml2ZXI=">https://www.bilibili.com/video/BV1QA411b7TR?p=7&amp;spm_id_from=pageDriver</span></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Vue3</title>
+    <url>/2021/06/22/Vue3/</url>
+    <content><![CDATA[<h1 id="vue3"><a class="markdownIt-Anchor" href="#vue3">#</a> Vue3</h1>
+<h2 id="起步"><a class="markdownIt-Anchor" href="#起步">#</a> 起步</h2>
+<h3 id="声明式渲染"><a class="markdownIt-Anchor" href="#声明式渲染">#</a> 声明式渲染</h3>
+<p><strong>声明式渲染，采用模板语法将数据渲染到 DOM</strong></p>
+<blockquote>
+<p>插值表达式  <code>&#123;&#123;message&#125;&#125;</code></p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;counter&quot;</span>&gt;</span></span><br><span class="line">    Counter: &#123;&#123;counter&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> Counter = &#123;</span><br><span class="line">    <span class="function"><span class="title">data</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            counter : <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Vue.createApp(Counter).mount(<span class="string">&#x27;#counter&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>指令  <code>v-bind:</code> <br>
+ 将  <code>v-bind:message</code>  此中的 message 与实例中的进行绑定，保持一致的数据</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;bind-attribute&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-bind:title</span>=<span class="string">&quot;message&quot;</span>&gt;</span></span><br><span class="line">    鼠标悬停几秒钟查看此处动态绑定的提示信息！</span><br><span class="line">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> AttributeBinding = &#123;</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      message: <span class="string">&#x27;You loaded this page on &#x27;</span> + <span class="keyword">new</span> <span class="built_in">Date</span>().toLocaleString()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">Vue.createApp(AttributeBinding).mount(<span class="string">&#x27;#bind-attribute&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="处理用户输入"><a class="markdownIt-Anchor" href="#处理用户输入">#</a> 处理用户输入</h3>
+<blockquote>
+<p>指令 <code>v-on</code>  添加事件监听器，以此调用实例中的方法</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;event-on&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;reverseMessage&quot;</span>&gt;</span> 这是message<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> reversef = &#123;</span><br><span class="line">    <span class="function"><span class="title">data</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            message : <span class="string">&quot;hello Vue.js!&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line">        <span class="function"><span class="title">reverseMessage</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">this</span>.message = <span class="built_in">this</span>.message.split(<span class="string">&#x27;&#x27;</span>).reverse().join(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Vue.createApp(reversef).mount(<span class="string">&#x27;#event-on&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>指令 <code>v-model</code>  双向绑定</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;two-way-binding&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> TwoWayBinding = &#123;</span><br><span class="line">    <span class="function"><span class="title">data</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span>&#123;</span><br><span class="line">            message: <span class="string">&#x27;hello vue&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Vue.createApp(TwoWayBinding).mount(<span class="string">&#x27;#two-way-binding&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="条件与循环"><a class="markdownIt-Anchor" href="#条件与循环">#</a> 条件与循环</h3>
+<blockquote>
+<p>控制一个元素是否显示 <code>v-if</code> true 显示，false 不显示</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;conditional-rendering&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-if</span>=<span class="string">&quot;seen&quot;</span>&gt;</span>现在你看到我了<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> ConditionalRendering = &#123;</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      seen: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Vue.createApp(ConditionalRendering).mount(<span class="string">&#x27;#conditional-rendering&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>v-for</code>  循环遍历渲染</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;vfor&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;index in lists&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">            &#123;&#123;index.list&#125;&#125;</span></span></span><br><span class="line"><span class="tag"><span class="string">        &lt;/li&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">    &lt;/ol&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">&lt;/div&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> VFor = &#123;</span><br><span class="line">    <span class="function"><span class="title">data</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span>&#123;</span><br><span class="line">            lists:[</span><br><span class="line">                &#123;<span class="attr">list</span>:<span class="string">&#x27;Learn javascript&#x27;</span>&#125;</span><br><span class="line">                &#123;<span class="attr">list</span>:<span class="string">&#x27;Learn Vue&#x27;</span>&#125;</span><br><span class="line">                &#123;<span class="attr">list</span>:<span class="string">&#x27;Build awesome&#x27;</span>&#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Vue.createApp(VFor).mount(<span class="string">&#x27;#vfor&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="组件化应用构建"><a class="markdownIt-Anchor" href="#组件化应用构建">#</a> 组件化应用构建</h3>
+<blockquote>
+<p>组件本质上是一个具有预定义选项的实例</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建Vue应用</span></span><br><span class="line"><span class="keyword">const</span> app = Vue.createApp(...)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义名为todo-item的新组件</span></span><br><span class="line">app.component(<span class="string">&#x27;todo-item&#x27;</span>,&#123;</span><br><span class="line">    template:<span class="string">&#x27;&lt;li&gt;this is a todo&lt;/li&gt;</span></span><br><span class="line"><span class="string">&#125;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">// 挂载Vue应用</span></span><br><span class="line"><span class="string">app.mount(...)</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>然后将其放到另一个组件模板中:</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 创建一个todo-item组件实例 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">todo-item</span>&gt;</span><span class="tag">&lt;/<span class="name">todo-item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>修改一下组件定义，能够接受数据， <code>prop:</code></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.component(<span class="string">&#x27;todo-item&#x27;</span>, &#123;</span><br><span class="line">  props: [<span class="string">&#x27;todo&#x27;</span>],</span><br><span class="line">  template: <span class="string">`&lt;li&gt;&#123;&#123; todo.text &#125;&#125;&lt;/li&gt;`</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>可以使用 <code>v-bind</code>  指令将这个传到循环输出的每个组件中：</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;todo-list-app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">     <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">      现在我们为每个 todo-item 提供 todo 对象</span></span><br><span class="line"><span class="comment">      todo 对象是变量，即其内容可以是动态的。</span></span><br><span class="line"><span class="comment">      我们也需要为每个组件提供一个“key”，稍后再</span></span><br><span class="line"><span class="comment">      作详细解释。</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line">    &lt;todo-item</span><br><span class="line">      v-for=&quot;item in groceryList&quot;</span><br><span class="line">      v-bind:todo=&quot;item&quot;</span><br><span class="line">      v-bind:key=&quot;item.id&quot;</span><br><span class="line">    &gt;<span class="tag">&lt;/<span class="name">todo-item</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> TodoList = &#123;</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      groceryList: [</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">0</span>, <span class="attr">text</span>: <span class="string">&#x27;Vegetables&#x27;</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">text</span>: <span class="string">&#x27;Cheese&#x27;</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">text</span>: <span class="string">&#x27;Whatever else humans are supposed to eat&#x27;</span> &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = Vue.createApp(TodoList)</span><br><span class="line"></span><br><span class="line">app.component(<span class="string">&#x27;todo-item&#x27;</span>, &#123;</span><br><span class="line">  props: [<span class="string">&#x27;todo&#x27;</span>],</span><br><span class="line">  template: <span class="string">`&lt;li&gt;&#123;&#123; todo.text &#125;&#125;&lt;/li&gt;`</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.mount(<span class="string">&#x27;#todo-list-app&#x27;</span>)</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>ES6</title>
+    <url>/2021/06/22/ES6/</url>
+    <content><![CDATA[<h1 id="es6学习"><a class="markdownIt-Anchor" href="#es6学习">#</a> ES6 学习</h1>
+<blockquote>
+<p>为什么学习 ES6</p>
+<ol>
+<li>更高的开发效率 Object.assign Array.from …</li>
+<li>更少的出错可能 let&amp;const Symbol …</li>
+<li>更人性化的语法 箭头函数 async&amp;await …</li>
+</ol>
+</blockquote>
+<h2 id="使用脚手架"><a class="markdownIt-Anchor" href="#使用脚手架">#</a> 使用脚手架</h2>
+<blockquote>
+<ol>
+<li><code>npm install learn-es-cli -g</code>  全局安装脚手架</li>
+<li><code>learn-es-cli init</code>  初始化项目 (es6-project)</li>
+<li><code>cd  es6-project</code>  进入项目列表</li>
+<li><code>npm install</code>  安装所需依赖</li>
+<li><code>npm run dev</code>  运行项目</li>
+<li><code>http://localhost:8080</code>  通过给定端口访问 (端口不尽相同，依据给定访问)</li>
+</ol>
+</blockquote>
+<h2 id="babel简单使用"><a class="markdownIt-Anchor" href="#babel简单使用">#</a> babel 简单使用</h2>
+<blockquote>
+<p>转换 es6 -&gt; es5<br>
+ <code>npm install babel-cli -g</code>  安装 babel<br>
+ <code>npm install -D babel-preset-es2015</code>  安装转 es6 依赖<br>
+创建 src 文件夹，并写段 es6 语法 js 代码<br>
+创建.babelrc 文件，写入规则 <code>&#123;&quot;presets&quot;: [&quot;es2015&quot;]&#125;</code>  配置转换规则<br>
+ <code>bebel src -d dist</code>  转换命令</p>
+</blockquote>
+<h2 id="语法"><a class="markdownIt-Anchor" href="#语法">#</a> 语法</h2>
+<h3 id="let"><a class="markdownIt-Anchor" href="#let">#</a> Let</h3>
+<ol>
+<li>ES6 新增 let 命令，用来声明变量，以 let 声明的全局变量不属于 window 对象，所以不可用 window 对象调用</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a) <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a) <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>用 let 定义变量不可以重复声明，var 可以</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">6</span></span><br><span class="line"><span class="built_in">console</span>.log(a)  <span class="comment">//6</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="number">6</span></span><br><span class="line"><span class="built_in">console</span>.log(a)  <span class="comment">//报错</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>let 声明的变量不存在变量提升</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)  </span><br><span class="line">    <span class="comment">//此处由于下面是以var定义的变量，会有变量提升，但是赋值还是在下面，所以最后结果会输出undefined</span></span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line">foo() <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)  </span><br><span class="line">    <span class="comment">//此处由于下面是以let定义的变量，不存在变量提升，所以结果会出错，表示没有变量</span></span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line">foo() </span><br><span class="line"><span class="comment">// Uncaught ReferenceError: Cannot access &#x27;a&#x27; before initialization</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>let 的暂时性死区</li>
+</ol>
+<blockquote>
+<p>先来看一段代码</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span> </span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">//5</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>,log(b) <span class="comment">//undefined</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="number">5</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> c = <span class="number">5</span></span><br><span class="line"><span class="built_in">console</span>.log(c) <span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(d)</span><br><span class="line"><span class="keyword">let</span> d = <span class="number">5</span> <span class="comment">// 报错，显示不存在d</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以上是 let 不存在变量提升所造成的，而因为此也会造成暂时性死区问题，再来看段代码</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">5</span>  <span class="comment">//自然此处是会报错，因为没有变量提升</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line"><span class="keyword">if</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a) <span class="comment">//5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line"><span class="keyword">if</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">6</span></span><br><span class="line">    <span class="built_in">console</span>.log(a) <span class="comment">//6</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line"><span class="keyword">if</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a) <span class="comment">//报错</span></span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>造成第四段代码产生错误结果的原因是什么呢？<br>
+如果在块级区域里，使用<strong> let 定义</strong>了某变量，那么在当前区域内使用此变量，只会寻找块级区域的，不会寻找全局中的，而又类似于第四段代码一样，将变量定义于使用之后，那么由于暂时性死区以及 let，const 无变量提升的原因，会造成错误<br>
+总之，代码块内，使用 let 命令声明变量之前，该变量都是不可用的，这就是暂时性死区</p>
+</blockquote>
+<ol start="5">
+<li>总结<br>
+使用 let 声明的变量：</li>
+</ol>
+<ul>
+<li>
+<p>不属于顶层对象 window</p>
+</li>
+<li>
+<p>不允许重复声明</p>
+</li>
+<li>
+<p>不存在变量提升</p>
+</li>
+<li>
+<p>暂时性死区</p>
+</li>
+<li>
+<p>块级作用域</p>
+</li>
+</ul>
+<h3 id="const"><a class="markdownIt-Anchor" href="#const">#</a> Const</h3>
+<blockquote>
+<p>同 let 一样</p>
+<ul>
+<li>不属于顶层对象 window</li>
+<li>不允许重复声明</li>
+<li>不存在变量提升</li>
+<li>块级作用域</li>
+</ul>
+</blockquote>
+<p>需要注意的是:<br>
+const 声明的变量必须进行初始化，不然会抛出异常 Uncaught SyntaxError: Missing initializer in const declaration。</p>
+<p>const 实际上保证的并不是变量的值不能改动，而是变量指向的那个内存地址所保存的数据不能改动。</p>
+<h3 id="解构赋值"><a class="markdownIt-Anchor" href="#解构赋值">#</a> 解构赋值</h3>
+<p>ES6 中新增了变量赋值方式，即解构赋值，主要对数组和对象，取值然后对变量进行赋值<br>
+重点需要保证：<strong>赋值两边的结构要相同</strong></p>
+<blockquote>
+<p>正常从数组取值并赋值给变量</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="keyword">let</span> a = arr[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">let</span> b = arr[<span class="number">1</span>]</span><br><span class="line"><span class="keyword">let</span> c = arr[<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用解构赋值</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,b,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>解构赋值的重点在于赋值，赋值元素本身不受改变，只是 copy 出来赋值给变量</p>
+</blockquote>
+<h4 id="数组解构赋值"><a class="markdownIt-Anchor" href="#数组解构赋值">#</a> 数组解构赋值</h4>
+<ol>
+<li>赋值元素可以是任何可遍历的对象</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,b,c] = <span class="string">&quot;abc&quot;</span>  <span class="comment">//[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</span></span><br><span class="line"><span class="keyword">let</span> [one,two,three] = <span class="keyword">new</span> <span class="built_in">Set</span>[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>被赋值的遍历可以是对象的属性，不仅限在单纯的变量</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> user = &#123;&#125;</span><br><span class="line">[user.firstName,user.secondName] = <span class="string">&#x27;qi liang&#x27;</span>.split(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(user.firstName)  <span class="comment">//qi</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>循环体</li>
+</ol>
+<blockquote>
+<p>解构赋值在循环中使用，配合 entries 使用</p>
+</blockquote>
+<p>Object.entries () 是返回自身可枚举的键值对数组</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    name:<span class="string">&quot;qiliang&quot;</span>,</span><br><span class="line">    age:<span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.entries(obj)) <span class="comment">//[ [&#x27;name&#x27;,&#x27;qiliang&#x27;],[&#x27;age&#x27;,18] ]</span></span><br></pre></td></tr></table></figure>
+<p>此时配合 entries 使用，即</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> user = &#123;</span><br><span class="line">  name: <span class="string">&#x27;qiliang&#x27;</span>,</span><br><span class="line">  age: <span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// loop over keys-and-values</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> [key, value] <span class="keyword">of</span> <span class="built_in">Object</span>.entries(user)) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;key&#125;</span>:<span class="subst">$&#123;value&#125;</span>`</span>) <span class="comment">// name:qiliang age:18</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>可以跳过赋值元素</li>
+</ol>
+<blockquote>
+<p>可以用逗号忽略数组某个元素对变量进行赋值</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [name,,title] = [<span class="string">&#x27;john&#x27;</span>,<span class="string">&#x27;jim&#x27;</span>,<span class="string">&#x27;sum&#x27;</span>,<span class="string">&#x27;Moon&#x27;</span>]</span><br><span class="line"><span class="built_in">console</span>.log(title)  <span class="comment">//sun</span></span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>rest 参数</li>
+</ol>
+<blockquote>
+<p>rest 可以来接受赋值数组的剩余参数，需要将 rest 放在被赋值变量的最后一个位置上</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [name1, name2, ...rest] = [<span class="string">&quot;Julius&quot;</span>, <span class="string">&quot;Caesar&quot;</span>, <span class="string">&quot;Consul&quot;</span>, <span class="string">&quot;of the Roman Republic&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(name1) <span class="comment">// Julius</span></span><br><span class="line"><span class="built_in">console</span>.log(name2) <span class="comment">// Caesar</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Note that type of `rest` is Array.</span></span><br><span class="line"><span class="built_in">console</span>.log(rest[<span class="number">0</span>]) <span class="comment">// Consul</span></span><br><span class="line"><span class="built_in">console</span>.log(rest[<span class="number">1</span>]) <span class="comment">// of the Roman Republic</span></span><br><span class="line"><span class="built_in">console</span>.log(rest.length) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>默认值</li>
+</ol>
+<blockquote>
+<p>如果数组内容少于被赋值变量的个数，不会报错，未被赋值的变量是 undefined，当然也可以赋予默认值</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [firstName, surname] = []</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(firstName) <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(surname) <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// default values</span></span><br><span class="line"><span class="keyword">let</span> [name = <span class="string">&quot;Guest&quot;</span>, surname = <span class="string">&quot;Anonymous&quot;</span>] = [<span class="string">&quot;Julius&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(name)    <span class="comment">// Julius (from array)</span></span><br><span class="line"><span class="built_in">console</span>.log(surname) <span class="comment">// Anonymous (default used)</span></span><br></pre></td></tr></table></figure>
+<h4 id="对象解构赋值"><a class="markdownIt-Anchor" href="#对象解构赋值">#</a> 对象解构赋值</h4>
+<ol>
+<li>基本用法</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> options = &#123;</span><br><span class="line">    width : <span class="string">&quot;100&quot;</span>,</span><br><span class="line">    height : <span class="string">&quot;200&quot;</span>,</span><br><span class="line">    title : <span class="string">&quot;Menu&quot;</span>,</span><br><span class="line">    display : <span class="string">&quot;flex&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> &#123;width,height,title,display&#125; = options</span><br><span class="line"><span class="built_in">console</span>.log(width); <span class="comment">//100</span></span><br><span class="line"><span class="built_in">console</span>.log(height); <span class="comment">//200</span></span><br><span class="line"><span class="built_in">console</span>.log(title); <span class="comment">//Menu</span></span><br><span class="line"><span class="built_in">console</span>.log(display); <span class="comment">//flex</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在对象解构赋值过程中，左侧模板要与右侧的 Object 一致，但是属性顺序无需一致</p>
+</blockquote>
+<ol start="2">
+<li>默认值</li>
+</ol>
+<blockquote>
+<p>对象结构赋值也是可以定义默认值的</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> options = &#123;</span><br><span class="line">  title: <span class="string">&quot;Menu&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123;width = <span class="number">100</span>, height = <span class="number">200</span>, title&#125; = options</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(title)  <span class="comment">// Menu</span></span><br><span class="line"><span class="built_in">console</span>.log(width)  <span class="comment">// 100</span></span><br><span class="line"><span class="built_in">console</span>.log(height) <span class="comment">// 200</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>rest</li>
+</ol>
+<blockquote>
+<p>数组中 rest 是将剩下的统一放到 rest 下，对象中是将剩下的存到 rest 下</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> options = &#123;</span><br><span class="line">    width = <span class="string">&quot;Menu&quot;</span></span><br><span class="line">    heigth = <span class="number">100</span></span><br><span class="line">    width = <span class="number">200</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> &#123;title, ...rest&#125; = options</span><br><span class="line"></span><br><span class="line"><span class="comment">// rest = &#123;height : 100,width : 200&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(rest.height) <span class="comment">//100</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>嵌套对象</li>
+</ol>
+<blockquote>
+<p>如果一个 Array 或者 Object 复杂，无论嵌套了 Array 或者 Object，无论嵌套了多少，只需要保证左右结构一致就好</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 以下结构中嵌套有一个对象一个数组</span></span><br><span class="line"><span class="keyword">let</span> options = &#123;</span><br><span class="line">    size:&#123;</span><br><span class="line">        width:<span class="number">200</span>,</span><br><span class="line">        height:<span class="number">100</span></span><br><span class="line">    &#125;,</span><br><span class="line">    items:[<span class="string">&quot;div1&quot;</span>,<span class="string">&quot;div2&quot;</span>].</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 相应的被赋值</span></span><br><span class="line"><span class="keyword">let</span> &#123;</span><br><span class="line">    size:&#123;</span><br><span class="line">        width,</span><br><span class="line">        height</span><br><span class="line">    &#125;,</span><br><span class="line">    items:[item1,item2]</span><br><span class="line">&#125; = options</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(width) <span class="comment">// 200</span></span><br><span class="line"><span class="built_in">console</span>.log(item2) <span class="comment">// &quot;div2&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 别名</span></span><br><span class="line"><span class="keyword">let</span> person = &#123;</span><br><span class="line">    name:<span class="string">&quot;qiliang&quot;</span>,</span><br><span class="line">    age:<span class="number">18</span>,</span><br><span class="line">    ac:&#123;</span><br><span class="line">        name:<span class="string">&quot;qi&quot;</span>,</span><br><span class="line">        age:<span class="number">18</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123;</span><br><span class="line">    name,</span><br><span class="line">    age,</span><br><span class="line">    ac</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(ac) <span class="comment">//此处ac是 &#123;name:&quot;qi&quot;,age:18&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123;</span><br><span class="line">    name,</span><br><span class="line">    age,</span><br><span class="line">    ac:&#123;</span><br><span class="line">        name,</span><br><span class="line">        age</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name) <span class="comment">//Uncaught SyntaxError: Identifier &#x27;name&#x27; has already been declared</span></span><br><span class="line"><span class="built_in">console</span>.log(age) <span class="comment">//Uncaught SyntaxError: Identifier &#x27;age&#x27; has already been declared</span></span><br><span class="line"><span class="comment">// 这是因为name和age变量重复被定义相当于,此时就可以给被赋值变量起别名</span></span><br><span class="line"><span class="keyword">let</span> &#123;</span><br><span class="line">    name:tName,</span><br><span class="line">    age:tAge,</span><br><span class="line">    ac:&#123;</span><br><span class="line">        name,</span><br><span class="line">        age</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(tName) <span class="comment">//qiliang</span></span><br><span class="line"><span class="built_in">console</span>.log(name) <span class="comment">//qi</span></span><br><span class="line"><span class="comment">// 此时都可以正确赋值并使用</span></span><br></pre></td></tr></table></figure>
+<h4 id="字符串解构赋值"><a class="markdownIt-Anchor" href="#字符串解构赋值">#</a> 字符串解构赋值</h4>
+<blockquote>
+<p>可以当作是数组的解构</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;qiliang&#x27;</span></span><br><span class="line"><span class="keyword">let</span> [a,b,c,d,e]  = str</span><br><span class="line"><span class="built_in">console</span>.log(a,b,c,d,e) <span class="comment">//q i l i a</span></span><br></pre></td></tr></table></figure>
+<h4 id="解构赋值tips"><a class="markdownIt-Anchor" href="#解构赋值tips">#</a> 解构赋值 tips</h4>
+<h5 id="解构用于函数参数上"><a class="markdownIt-Anchor" href="#解构用于函数参数上">#</a> 解构用于函数参数上</h5>
+<blockquote>
+<p>这是一个正常求和函数的写法</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> sum = <span class="function"><span class="params">arr</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">        result += arr[i]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(result) <span class="comment">//6</span></span><br><span class="line">&#125;</span><br><span class="line">sum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>接下来使用到解构赋值<br>
+函数本身参数处相当于赋值等号左边，执行函数处传参相当于赋值等号右边</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 可以在参数处使用解构赋值，由于传递时一个数组，那么对应参数此处也是一个数组结构</span></span><br><span class="line"><span class="keyword">const</span> sum = [a,b,c] =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a+b+c) <span class="comment">//6</span></span><br><span class="line">&#125;</span><br><span class="line">sum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>再来看一个例子</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 解构赋值左边是一个函数，接收的时一个对象参数</span></span><br><span class="line"><span class="keyword">const</span> foo = <span class="function">(<span class="params">&#123;name,age&#125;</span>) =&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name,age) <span class="comment">//qiliang 18</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 还可以传递默认参数,这种并没有传递school，但是由于默认值也可以输出，如果传递那么就以传递过来的值为最终值</span></span><br><span class="line"><span class="keyword">const</span> foo = <span class="function">(<span class="params">&#123;name,age,school=<span class="string">&#x27;bmd&#x27;</span>&#125;</span>) =&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name,age,school) <span class="comment">//qiliang 18 bmd</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 解构赋值右边，右边传递一个对象参数</span></span><br><span class="line">foo(&#123;</span><br><span class="line">    name:<span class="string">&quot;qiliang&quot;</span>,</span><br><span class="line">    age:<span class="number">18</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>作为函数的返回值而言</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        name:<span class="string">&#x27;qiliang&#x27;</span>,</span><br><span class="line">        age:<span class="number">18</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> &#123;name,age&#125; = foo() <span class="comment">//这种写法就是作为函数的返回值而言，也可以使用解构赋值，保持赋值两边结构相同</span></span><br><span class="line"><span class="built_in">console</span>.log(name,age) <span class="comment">//qiliang 18</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>需要交换两个变量的值</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span> ;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">2</span> ;</span><br><span class="line"><span class="keyword">let</span> c = <span class="number">3</span> ;</span><br><span class="line"></span><br><span class="line">[a,c] = [c,a]</span><br><span class="line"><span class="built_in">console</span>.log(a,b,c); <span class="comment">// 3 2 1</span></span><br></pre></td></tr></table></figure>
+<h5 id="json与解构赋值"><a class="markdownIt-Anchor" href="#json与解构赋值">#</a> json 与解构赋值</h5>
+<blockquote>
+<p>由于现在项目基本都是前后端分离，前端一个项目，后端一个项目，中间以 Ajax 请求去连接，通常传递的都是 json 值</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> jsonText = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;qilian&quot;,&quot;age&quot;:&quot;18&quot;&#125;&#x27;</span></span><br><span class="line"><span class="keyword">const</span> obj = <span class="built_in">JSON</span>.parse(jsonText);</span><br><span class="line"><span class="built_in">console</span>.log(obj) <span class="comment">//&#123;name: &quot;qilian&quot;, age: &quot;18&quot;&#125;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>此处使用一下解构赋值</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> jsonText = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;qilian&quot;,&quot;age&quot;:&quot;18&quot;&#125;&#x27;</span></span><br><span class="line"><span class="keyword">const</span> &#123;name,age&#125; = <span class="built_in">JSON</span>.parse(jsonText);</span><br><span class="line"><span class="built_in">console</span>.log(name,age) <span class="comment">//qilian 18&#125;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以上是一个很简单的 json 使用<br>
+接下来看一下模拟一下 ajax 请求场景</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; json数据(data.json)</span><br><span class="line">&#123;</span><br><span class="line">    &quot;name&quot;:&quot;qiliang&quot;,</span><br><span class="line">    &quot;age&quot;:&quot;18&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 此处使用axios发送ajax请求</span></span><br><span class="line">axios.get(<span class="string">&#x27;./data.json&#x27;</span>).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res) <span class="comment">//此时取到的是请求响应的一系列内容，包括data等</span></span><br><span class="line">    <span class="built_in">console</span>.log(res.data) <span class="comment">//此时可以拿到data</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 由于返回过来的res是一堆数据的综合，我们可以在参数处进行解构赋值，例如：</span></span><br><span class="line">axios.get(<span class="string">&#x27;./data.json&#x27;</span>).then(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data) <span class="comment">//此时取到的是请求响应的内容里的data</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 再其次，data里是上述json文件中的内容，我们就可以再解构赋值，拿到具体内容</span></span><br><span class="line">axios.get(<span class="string">&#x27;./data.json&#x27;</span>).then(<span class="function">(<span class="params">data:&#123;name,age&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name,age)  <span class="comment">//qiliang 18 此时就可以取到返回内容中的data中的name和age属性</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>所以在实际项目中，解构赋值的使用，能让我们更便利，更清晰</p>
+<h3 id="string"><a class="markdownIt-Anchor" href="#string">#</a> String</h3>
+<h4 id="模板字符串"><a class="markdownIt-Anchor" href="#模板字符串">#</a> 模板字符串</h4>
+<blockquote>
+<p>字符串拼接</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;name,age,city&#125; &#123;<span class="attr">name</span>:<span class="string">&quot;qiliang&quot;</span>,<span class="attr">age</span>: <span class="string">&quot;18&quot;</span>,<span class="attr">city</span>:<span class="string">&quot;yc&quot;</span>&#125;</span><br><span class="line"><span class="keyword">let</span> sInfo = <span class="string">&quot;我叫&quot;</span>+name+<span class="string">&quot;来自&quot;</span>+city+<span class="string">&quot;今年&quot;</span>+age+<span class="string">&quot;岁&quot;</span></span><br><span class="line"><span class="keyword">let</span> Info = <span class="string">`我叫<span class="subst">$&#123;name&#125;</span>来自<span class="subst">$&#123;age&#125;</span>今年<span class="subst">$&#123;age&#125;</span>`</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>${} 中可以是运算表达式，对象的属性，函数的调用</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span> </span><br><span class="line"><span class="keyword">let</span> b = <span class="number">6</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name:<span class="string">&#x27;qiliang&#x27;</span>,</span><br><span class="line">    age:<span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">100</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = <span class="string">`<span class="subst">$&#123;a+b&#125;</span>`</span></span><br><span class="line"><span class="built_in">console</span>.log(result); <span class="comment">//11</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;obj.name&#125;</span>`</span>) <span class="comment">//qiliang</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;fun()&#125;</span>`</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="array"><a class="markdownIt-Anchor" href="#array">#</a> Array</h3>
+<blockquote>
+<p>在 ES6 中新增了很多实用的原生 API，使得开发者对 Array 的操控性更强</p>
+</blockquote>
+<h4 id="数组的遍历方式"><a class="markdownIt-Anchor" href="#数组的遍历方式">#</a> 数组的遍历方式</h4>
+<blockquote>
+<p>ES5 中数组遍历方式</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>for 循环</strong></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(arr[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>后来语法升级，有了更多的方法</p>
+<ul>
+<li><strong>forEach()</strong></li>
+</ul>
+<blockquote>
+<p>forEach () 没有返回值，只是针对每个元素调用 function</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">arr.forEach(<span class="function"><span class="params">element</span> =&gt;</span> &#123;</span><br><span class="line">       <span class="built_in">console</span>.log(element); <span class="comment">//1,2,3,4,5</span></span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>arr.map()</strong></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 可以返回一个新数组</span></span><br><span class="line"><span class="keyword">let</span> arr2 = arr.map(<span class="function">(<span class="params">value,index</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(value,index);</span><br><span class="line">        <span class="keyword">return</span> value + <span class="number">1</span></span><br><span class="line">    &#125;)</span><br><span class="line"><span class="built_in">console</span>.log(arr2); <span class="comment">//value 是 2,3,4,5,6的数组</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>arr.filter()</strong></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr3 = arr.filter(<span class="function">(<span class="params">value</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(value);</span><br><span class="line">        <span class="keyword">return</span> value == <span class="number">1</span></span><br><span class="line">    &#125;)</span><br><span class="line"><span class="built_in">console</span>.log(arr3); <span class="comment">// 1 数组</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>for … of</strong> 遍历方式</li>
+</ul>
+<blockquote>
+<p>一种新增的遍历数据结构的方法，可以遍历数组对象，字符串等数据结构</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> value <span class="keyword">of</span> arr)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value)  <span class="comment">//1 2 3 4 5 不同于for in取到的是字符串</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> index <span class="keyword">of</span> arr.keys())&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(index,arr[index]) <span class="comment">// 0 1 2 3 4 索引值 以及</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> [index,value] <span class="keyword">of</span> arr.entires())&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(index,value) <span class="comment">// 索引与值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>self-studies</category>
+      </categories>
+      <tags>
+        <tag>Knowledge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>aliyun云服务器学习</title>
+    <url>/2021/06/27/aliyun%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Promise相关</title>
+    <url>/2021/06/24/Promise%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<h1 id="promise"><a class="markdownIt-Anchor" href="#promise">#</a> Promise</h1>
+<h2 id="异步"><a class="markdownIt-Anchor" href="#异步">#</a> 异步</h2>
+<h3 id="js是单线程的"><a class="markdownIt-Anchor" href="#js是单线程的">#</a> js 是单线程的</h3>
+<p>即 js 同一时间只能处理一个任务，作为浏览器脚本语言，JS 的主要用途是与用户互动，以及操作 DOM，这决定了它只能是单线程，否则会带来很复杂的同步问题，<strong>比如，假定 JS 同时有两个线程，一个线程在某个 DOM 节点上添加内容，另一个线程删除了这个节点，这是浏览器应该以哪个线程为准？</strong><br>
+单线程就意味着，所有的人物都需要排队，前一个任务结束，才能执行后一个任务。如果前一个任务执行耗时很长，那么后一个任务就不得不一直排队等待</p>
+<blockquote>
+<p>所有任务分两类，同步和异步</p>
+<ul>
+<li>同步：只有前一个任务执行完毕，才能执行后一个任务</li>
+<li>异步：当同步任务执行到某个 WebAPI 时，就会触发异步操作，此时浏览器会单独开线程去处理这些异步任务。</li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>self-studies</category>
+      </categories>
+      <tags>
+        <tag>Knowledge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试题小集</title>
+    <url>/2021/06/28/%E6%B5%8B%E8%AF%95%E9%A2%98%E5%B0%8F%E9%9B%86/</url>
+    <content><![CDATA[<h1 id="测试题小集合"><a class="markdownIt-Anchor" href="#测试题小集合">#</a> 测试题小集合</h1>
+<ol>
+<li>
+<p>数组有哪些原生方法</p>
+<ul>
+<li>Array.join () 方法是将一个数组里面的所有元素转换成字符串，然后再将他们连接起来返回一个新数组</li>
+<li>Array.reverse () 方法将颠倒数组中元素的顺序并返回一个颠倒后的数组</li>
+<li>Array.sort () 是在原数组上进行排序，返回排序后的数组 按照字符顺序</li>
+<li>rray.slice (a,b) 方法可从已有的数组中返回指定的一个片段 (slice) 两个参数 a 决定从何开始取，b 决定从何结束取</li>
+<li>Array.concat () 方法用于连接两个或多个参数（数组，字符串等</li>
+<li>Array.splice (index,howmany,item) 方法从数组中添加 / 删除元素，然后返回被删除的元素。它在原数组上修改数组 三个参数 index 规定操作的位置 howmany 要操作的元素数量 (默认从 index 开始到结束) item 要添加的新元素</li>
+<li>Array.push () 方法可向数组的末尾添加一个或多个元素，并返回新的长度</li>
+<li>Array.pop () 方法用于删除并返回数组的最后一个元素</li>
+<li>Array.forEach () 为每个数组元素执行 callback 函数</li>
+<li>Array.map 方法会给原数组中的每个元素都按顺序调用一次 callback 函数，callback 每次执行后的返回值（没有指定返回值则返回 undefined）组合起来形成一个新数组。</li>
+<li>Array.filter () 为数组中的每个元素调用一次 callback 函数，并利用所有使得 callback 返回 true 或 等价于 true 的值 的元素创建一个新数组</li>
+</ul>
+</li>
+<li>
+<p>JavaScript 中的’use strict’</p>
+<blockquote>
+<p>严格模式，使用后代码会在语法等方面进行严格检测</p>
+</blockquote>
+<ol>
+<li>严格模式通过抛出错误来消除了一些原有静默错误。</li>
+<li>严格模式修复了一些导致 JavaScript 引擎难以执行优化的缺陷：有时候，相同的代码，严格模式可以比非严格模式下运行得更快。</li>
+<li>严格模式禁用了在 ECMAScript 的未来版本中可能会定义的一些语法。</li>
+</ol>
+</li>
+<li>
+<p>JavaScript</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 直接置空</span></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line">arr = []</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line"><span class="comment">// lenght置0</span></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line">arr.length = <span class="number">0</span></span><br><span class="line"><span class="built_in">console</span>.log(arr)</span><br><span class="line"><span class="comment">//splice</span></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">arr.splice(<span class="number">0</span>,arr.length)</span><br><span class="line"><span class="built_in">console</span>.log(arr)</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>this</p>
+<ul>
+<li>this</li>
+</ul>
+</li>
+<li>
+<p>原生 JavaScript 实现功能</p>
+</li>
+<li>
+<p>0.1 + 0.2 === 0.3 结果是什么？原因？解决？</p>
+<ul>
+<li>0.1+0.2 结果 0.3000000004 false</li>
+<li>封装一个方法，利用 toPrecision 凑整，再利用 parseFloat 转数字</li>
+</ul>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">strip</span>(<span class="params">num, precision = <span class="number">12</span></span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> +<span class="built_in">parseFloat</span>(num.toPrecision(precision));</span><br><span class="line">&#125; <span class="comment">//12为经验之选</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>运算的精度，用把小数转整再运算</li>
+</ul>
+</li>
+<li>
+<p>定义一个 log 函数，让他代替 console.log () 方法</p>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span></span><br><span class="line"><span class="keyword">let</span> log = <span class="function">(<span class="params">parmas</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(parmas)</span><br><span class="line">&#125;</span><br><span class="line">log(a)</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>传值赋值和传址赋值有什么不同</p>
+<ul>
+<li>传值，将值 copy 出来赋值，赋值完成后，被赋值变量发生改变，原变量不受影响</li>
+<li>传址，将变量指向另一个变量的地址，两者共同享有一个地址区域，无论任意一个进行地址内数据的修改，都受影响</li>
+</ul>
+</li>
+<li>
+<p>请对数字数组比如:[23,1,45,3,123,88] 实现从小到大和从大到小的排序</p>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">23</span>,<span class="number">1</span>,<span class="number">45</span>,<span class="number">3</span>,<span class="number">123</span>,<span class="number">88</span>]</span><br><span class="line"><span class="keyword">let</span> minFunc = <span class="function">(<span class="params">params</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> i=<span class="number">0</span>,j;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;params.length)&#123;</span><br><span class="line">        j = i + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(j&lt;params.length)&#123;</span><br><span class="line">            <span class="keyword">if</span> (params[j]&lt;params[i]) &#123;</span><br><span class="line">                [params[i],params[j]] = [params[j],params[i]]   </span><br><span class="line">            &#125;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        i++</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> params</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> minArr = minFunc(arr)</span><br><span class="line"><span class="built_in">console</span>.log(minArr);</span><br><span class="line"><span class="keyword">let</span> maxArr = minArr.reverse()</span><br><span class="line"><span class="built_in">console</span>.log(maxArr);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>写一个 mul 函数，方法如下：<br>
+console.log(mul(2)(3)(4))<br>
+console.log(mul(4)(3)(4))</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> mul = <span class="function"><span class="params">a</span> =&gt;</span>&#123;<span class="keyword">return</span> <span class="function"><span class="params">b</span> =&gt;</span>&#123;<span class="keyword">return</span> <span class="function"><span class="params">c</span> =&gt;</span>&#123;<span class="keyword">return</span> a*b*c&#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(mul(<span class="number">2</span>)(<span class="number">3</span>)(<span class="number">4</span>)); <span class="comment">//24</span></span><br><span class="line"><span class="built_in">console</span>.log(mul(<span class="number">4</span>)(<span class="number">3</span>)(<span class="number">4</span>)); <span class="comment">//48</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>给 String 对象添加一个原型方法 addSpace，可以将字符串的每个字符间以空格分开返回</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">&quot;nihaoa&quot;</span></span><br><span class="line"><span class="built_in">String</span>.prototype.addSpace = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.split(<span class="string">&#x27;&#x27;</span>).join(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> newString = string.addSpace()</span><br><span class="line"><span class="built_in">console</span>.log(newString);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>函数循环可能变量值为最后一个<br>
+这是由于 var 定义的变量的作用域问题</p>
+<blockquote>
+<p>匿名函数</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> data = []</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> index=<span class="number">0</span>;index&lt;<span class="number">3</span>;index++)&#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(index);</span><br><span class="line">    &#125;)()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>let 定义变量</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> data = []</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> index=<span class="number">0</span>;index&lt;<span class="number">3</span>;index++)&#123;</span><br><span class="line">    data[index]=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(index);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">data[<span class="number">0</span>]()</span><br><span class="line">data[<span class="number">1</span>]()</span><br><span class="line">data[<span class="number">2</span>]()</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>为 Array 对象扩展一个数组排重的 unique 方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">78</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">21</span>,<span class="number">1</span>]</span><br><span class="line"><span class="built_in">Array</span>.unique = <span class="function"><span class="keyword">function</span> (<span class="params">params</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> newArr = []</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> index <span class="keyword">in</span> params)&#123;</span><br><span class="line">        <span class="keyword">if</span> (newArr.indexOf(arr[index]) == -<span class="number">1</span>) &#123;</span><br><span class="line">            newArr.push(arr[index])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> newArr</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> newArr =<span class="built_in">Array</span>.unique(arr)</span><br><span class="line"><span class="built_in">console</span>.log(newArr);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>JavaScript 实现类，继承，扩展子类属性方法，实例化</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">    <span class="comment">// 实现</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">        <span class="function"><span class="title">constructor</span>(<span class="params">type</span>)</span>&#123;</span><br><span class="line">            <span class="built_in">this</span>.type = type</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="title">run</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="built_in">this</span>.type + <span class="string">&#x27;:&#x27;</span>+<span class="string">&#x27;I can run&#x27;</span>);</span><br><span class="line">            <span class="keyword">return</span> (<span class="built_in">this</span>.type + <span class="string">&#x27;:&#x27;</span>+<span class="string">&#x27;I can run&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 继承</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">        <span class="function"><span class="title">constructor</span>(<span class="params">type,name</span>)</span>&#123;</span><br><span class="line">            <span class="built_in">super</span>(type)</span><br><span class="line">            <span class="comment">// 扩展属性</span></span><br><span class="line">            <span class="built_in">this</span>.name = name</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 扩展方法</span></span><br><span class="line">        <span class="function"><span class="title">eat</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="built_in">this</span>.name + <span class="string">&#x27;:&#x27;</span> + <span class="string">&#x27;I can eat&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="title">run</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="built_in">this</span>.name + <span class="string">&#x27;:&#x27;</span>);</span><br><span class="line">            <span class="built_in">super</span>.run()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 实例化</span></span><br><span class="line">    <span class="keyword">let</span> dog = <span class="keyword">new</span> Animal(<span class="string">&#x27;dog&#x27;</span>)</span><br><span class="line">    dog.run()</span><br><span class="line">    <span class="keyword">let</span> dog1 = <span class="keyword">new</span> Dog(<span class="string">&#x27;dog&#x27;</span>,<span class="string">&#x27;wili&#x27;</span>)</span><br><span class="line">    dog1.eat()</span><br><span class="line">    dog1.run()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>旺财是一条可爱的小狗 (Dog)，它是母的 ( sex )，颜色 ( color ) 是白色，它的叫声很好听 ( wow)，每次看到主人的时候就会乖乖叫一声 ( yelp)。花花和旺财一样，原来也是一条可爱的小狗，可是突然有一天疯了 (MadDog )，一看到人就会每隔半秒叫一声 （ wow) 地不停叫唤 (yelp)。用 JS 面向对象代码来实现。</p>
+</li>
+</ol>
+<pre><code><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dogs</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">sex,color</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.sex = sex</span><br><span class="line">        <span class="built_in">this</span>.color = color</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">yelp</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;wow&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Dogs</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">sex,color</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">super</span>(sex,color)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MadDog</span> <span class="keyword">extends</span> <span class="title">Dogs</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">yelp</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">setInterval</span>( <span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">super</span>.yelp()</span><br><span class="line">        &#125;,<span class="number">500</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> wangcai = <span class="keyword">new</span> Dog(<span class="string">&#x27;母&#x27;</span>,<span class="string">&#x27;color&#x27;</span>)</span><br><span class="line">wangcai.yelp()</span><br><span class="line"><span class="keyword">let</span> huahua = <span class="keyword">new</span> MadDog()</span><br><span class="line">huahua.yelp()</span><br></pre></td></tr></table></figure>
+</code></pre>
+]]></content>
+  </entry>
+  <entry>
+    <title>关于http状态码那些事</title>
+    <url>/2021/07/01/%E5%85%B3%E4%BA%8Ehttp%E7%8A%B6%E6%80%81%E7%A0%81%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
+    <content><![CDATA[<h1 id="状态码-status-codes"><a class="markdownIt-Anchor" href="#状态码-status-codes">#</a> 状态码 status-codes</h1>
+<h2 id="http状态码分类"><a class="markdownIt-Anchor" href="#http状态码分类">#</a> HTTP 状态码分类</h2>
+<ol>
+<li>1** 信息。服务器收到请求，需要请求者继续指向操作</li>
+<li>2** 成功。操作被成功接收并处理</li>
+<li>3** 重定向。需要进一步的操作以完成请求</li>
+<li>4** 客户端错误。请求包含语法错误或无法完成请求</li>
+<li>5** 服务器错误。服务器在处理请求的过程中发生了错误</li>
+</ol>
+<h2 id="状态码列表"><a class="markdownIt-Anchor" href="#状态码列表">#</a> 状态码列表</h2>
+<blockquote>
+<ul>
+<li>100 继续。客户端应继续请求</li>
+<li>200 请求成功。一般用于 GET 与 POST 请求</li>
+<li>303 查看其他地址。使用 GET 和 POST 请求查看</li>
+<li>400 客户端请求的语法错误，服务器无法理解</li>
+<li>403 服务器理解请求客户端的请求，但是拒绝执行此请求</li>
+<li>500 服务器内部错误，无法完成请求</li>
+<li>505 服务器不支持请求的 HTTP 协议的版本，无法完成处理</li>
+</ul>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>前端题整理</title>
+    <url>/2021/07/01/%E5%89%8D%E7%AB%AF%E9%A2%98%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<h1 id="题整理"><a class="markdownIt-Anchor" href="#题整理">#</a> 题整理</h1>
+<h2 id="evol"><a class="markdownIt-Anchor" href="#evol">#</a> Evol</h2>
+<ol>
+<li>前端怎么实现渲染</li>
+</ol>
+<blockquote>
+<ol>
+<li>处理 HTML 标记并构建 DOM 树</li>
+<li>处理 CSS 标记并构建 CSSOM 树</li>
+<li>将 DOM 与 CSSOM 合并成一个渲染树</li>
+<li>根据渲染树来布局，以计算每个节点的几何信息</li>
+<li>将节点绘制到屏幕<br>
+ PS : 这几个步骤不一定一次性完成，如果 DOM 或 CSSOM 被修改，某些步骤会重复执行</li>
+</ol>
+</blockquote>
+<h2 id="html"><a class="markdownIt-Anchor" href="#html">#</a> HTML</h2>
+<ol>
+<li>行内标签有哪些？块级标签有哪些？空标签有哪些？</li>
+</ol>
+<blockquote>
+<ol>
+<li>行内标签</li>
+</ol>
+<ul>
+<li>行内标签就是在页面内只占据刚好能包裹自己内容的空间</li>
+<li>设置宽高属性值不生效，只依靠内容来决定大小</li>
+<li>行内标签转换为块级标签：style:“display:block”<br>
+ <code>&lt;a&gt;</code> : 标签可定义锚<br>
+ <code>&lt;i&gt;</code> : 斜体文本效果<br>
+ <code>&lt;label&gt;</code> : 标注标签<br>
+ <code>&lt;select&gt;</code> : 创建单选或多选菜单<br>
+ <code>&lt;span&gt;</code> : 组合文档中的行内元素<br>
+ <code>&lt;textarea&gt;</code> : 多行的文本输入控件</li>
+</ul>
+<ol start="2">
+<li>块级标签</li>
+</ol>
+<ul>
+<li>块级标签就是占据整行内容的标签 (如果溢出到下一行，下一行也占据)</li>
+<li>块级标签转换为行内标签：display:inline;<br>
+ <code>&lt;div&gt;</code> : 定义文档中的分区或节<br>
+ <code>&lt;form&gt;</code> : 创建 HTML 表单<br>
+ <code>&lt;h1&gt;</code> : 标题标签<br>
+ <code>&lt;li&gt;</code>  标签定义列表项目<br>
+ <code>&lt;ul&gt;</code>  定义无序列表<br>
+ <code>&lt;table&gt;</code>  标签定义 HTML 表格</li>
+</ul>
+<ol start="3">
+<li>空标签</li>
+</ol>
+<ul>
+<li>没有内容的元素<br>
+ <code>&lt;br/&gt;</code> : 换行<br>
+ <code>&lt;hr&gt;</code> : 分隔线<br>
+ <code>&lt;input&gt;</code> : 文本框等<br>
+ <code>&lt;img&gt;</code> : 图片<br>
+ <code>&lt;link&gt;</code> <br>
+ <code>&lt;meta&gt;</code></li>
+</ul>
+</blockquote>
+<h2 id="css"><a class="markdownIt-Anchor" href="#css">#</a> CSS</h2>
+<ol>
+<li>怎么固定一个 div？</li>
+</ol>
+<blockquote>
+<p>position 设定 fixed 值</p>
+</blockquote>
+<ol start="2">
+<li>怎么设置一个元素垂直居中</li>
+</ol>
+<blockquote>
+<ol>
+<li>flex 布局 align-items:center</li>
+<li>定位</li>
+</ol>
+</blockquote>
+<ol start="3">
+<li>三栏布局</li>
+</ol>
+<blockquote>
+<ol>
+<li>position+margin</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">   <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.left</span> &#123;</span><br><span class="line">   <span class="attribute">position</span>: absolute;</span><br><span class="line">   <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">   <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">   <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">   <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">   <span class="attribute">background-color</span>: gray;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.right</span> &#123;</span><br><span class="line">   <span class="attribute">position</span>: absolute;</span><br><span class="line">   <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">   <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">   <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">   <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">   <span class="attribute">background-color</span>: gray;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.middle</span> &#123;</span><br><span class="line">   <span class="attribute">margin-left</span>: <span class="number">210px</span>;</span><br><span class="line">   <span class="attribute">margin-right</span>: <span class="number">210px</span>;</span><br><span class="line">   <span class="attribute">background-color</span>: lightgray;</span><br><span class="line">   <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>float</li>
+</ol>
+<blockquote>
+<ol>
+<li>左右浮动设置大小</li>
+<li>中间设置 margin 距离左右值，设置高度</li>
+</ol>
+</blockquote>
+<ol start="3">
+<li>双飞翼布局</li>
+</ol>
+<blockquote>
+<ol>
+<li>左中右三个元素分别左浮动。</li>
+<li>中间元素占据第一位置优先渲染，设置该元素 width 为 100%</li>
+<li>左元素设置左边距为 - 100% 以使得左元素上升一行并且处于最左位置，右元素设置左边距为自身宽度的负值使得右元素上升一行处于最右位置。</li>
+<li>设置中间元素的子元素左右边距为左右元素留空位，以展示中间元素内容。</li>
+</ol>
+</blockquote>
+<ol start="3">
+<li>flex 布局</li>
+</ol>
+<blockquote>
+<ol>
+<li>弹性盒子本身就是并排，设置宽度即可</li>
+<li>用父盒子也就是容器包住三栏 (设置 display:flex 即可)</li>
+<li>中间栏设置 flex:1, 由于另外两栏固定宽度，中间自适应</li>
+</ol>
+</blockquote>
+</blockquote>
+<h2 id="js"><a class="markdownIt-Anchor" href="#js">#</a> JS</h2>
+<ol>
+<li>JS 的基本数据类型有哪些？JS 的引用数据类型有哪些？</li>
+</ol>
+<blockquote>
+<ol>
+<li>基本数据类型<br>
+ Number,String,Boolean,NULL,Undefined,(Bigint,Symbol) ES6 新增 | 按值访问</li>
+<li>引用数据类型<br>
+ Object,Array,Function | 按引用访问</li>
+</ol>
+</blockquote>
+<ol start="2">
+<li>Ajax 流程</li>
+</ol>
+<blockquote>
+<ol>
+<li>创建并获取 xmlhttprequest 对象</li>
+<li>使用 onreadystatechange 属性设置对象状态改变的时候要调用的函数</li>
+<li>使用 open 方法对 xmlhttprequest 对象进行设置</li>
+<li>使用 send 方法发送请求</li>
+<li>客户端接收来自于服务器端的响应，然后处理响应</li>
+</ol>
+</blockquote>
+<ol start="3">
+<li>Promise</li>
+</ol>
+<blockquote>
+<p>Promise 对象是 js 的异步操作解决方案，为异步操作提供统一接口。解决回调地狱</p>
+</blockquote>
+<ol start="4">
+<li>箭头函数</li>
+</ol>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let fun &#x3D; function(arr)&#123;</span><br><span class="line">  console.log(arr)</span><br><span class="line">&#125;</span><br><span class="line">------------------</span><br><span class="line">let fun &#x3D; (arr)&#x3D;&gt;&#123;</span><br><span class="line">  console.log(arr)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ol start="5">
+<li>let、const</li>
+</ol>
+<blockquote>
+<p>let const ES6 新增变量定义方式 (解决 var 变量提升问题)</p>
+</blockquote>
+]]></content>
+  </entry>
+</search>

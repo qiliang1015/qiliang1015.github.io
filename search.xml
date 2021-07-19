@@ -1419,4 +1419,14 @@ console.log(mul(4)(3)(4))</p>
 </blockquote>
 ]]></content>
   </entry>
+  <entry>
+    <title>前端小技巧</title>
+    <url>/2021/07/19/%E5%89%8D%E7%AB%AF%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<h1 id="小技巧整理"><a class="markdownIt-Anchor" href="#小技巧整理">#</a> 小技巧整理</h1>
+<h2 id="css方面"><a class="markdownIt-Anchor" href="#css方面">#</a> css 方面</h2>
+<ol>
+<li>不显示滚动条 (某些不兼容)</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">::-webkit-scrollbar &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
 </search>
